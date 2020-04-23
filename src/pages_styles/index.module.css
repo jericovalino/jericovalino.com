@@ -1,0 +1,53 @@
+.Index {
+    width: 100%;
+}
+
+.sidenav {
+    position: fixed;
+    width: 60px;
+    height: 100%;
+    padding: .5em .15em;
+    background-color: var(--dark-nav-color);
+    color: white;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.nav__item {
+    width: 50px;
+    height: 50px;
+    border-radius: .5em;
+    background-color: var(--dark-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.watermark {
+    position: fixed;
+    top: 0;
+    right: 5%;
+    height: 100vh;
+
+    font-weight: bold;
+    font-size: 220px;
+    color: var(--dark-nav-color);
+
+    display: flex;
+    flex-flow: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    z-index: -99;
+}
+
+.watermark text {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
