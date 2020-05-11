@@ -1,24 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap');
-
-
-
 :root{
-
-    --light-bg-color: #D4D4D4;
-    --light-nav-color: #C4C4C4;
-
+    /* Set the deafult values == light */
+    --selected-bg-color: var(--light-bg-color);
+    --selected-nav-color: var(--light-nav-color);
+    /* Set the 'light' theme */
+    --light-bg-color: #FFF;
+    --light-nav-color: #393D46;
+    /* Set the 'dark' theme */
     --dark-bg-color: #232323;
     --dark-nav-color: #343434;
-
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
+    transition-property: background-color, color;
+    transition-duration: 300ms;
+    transition-timing-function: ease-in-out;
 }
 
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--dark-bg-color);
+    background-color: var(--selected-bg-color);
 }
