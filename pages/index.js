@@ -22,7 +22,7 @@ const IndexPage = () => {
     <div className={style.Index}>
 
       <nav className={style.navbar}>
-        <div className={style.main__nav__item}></div>
+        <div className={style.main__nav__item}><h1>JV</h1></div>
 
         <div className={style.nav__item}>
           <UserIcon width="30px" height="30px" />

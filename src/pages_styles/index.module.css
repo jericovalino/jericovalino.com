@@ -18,6 +18,14 @@
     width: 50px;
     height: 50px;
     background-color: #EBD070;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding: 4px;
+}
+
+.main__nav__item h1 {
+    margin: 0 0 -4px;
 }
 
 .nav__item {
@@ -29,9 +37,10 @@
     justify-content: center;
     align-items: center;
     margin: 1em 0 0;
-    transition-property: transform;
+    transition-property: all;
     transition-duration: 100ms;
     transition-timing-function: ease-in-out;
+    cursor: pointer;
 }
 
 .ThemeSwitch {
@@ -40,7 +49,11 @@
 }
 
 .nav__item:hover {
-    transform: scale(1.1);
+    margin-left: 5px;
+    align-self: flex-start;
+    width: 120px;
+    justify-content: flex-end;
+    padding-right: 10px;
 }
 
 .watermark {
