@@ -1,6 +1,6 @@
 import React from 'react';
 import style from "./style.module.css";
-import { useTheme } from "../../hooks/theme";
+import { useTheme } from "../../src/hooks/theme";
 
 const ThemeSwitch = () => {
 

@@ -1,0 +1,81 @@
+.watermark {
+    position: fixed;
+    top: calc(50% - 250px);
+    right: 5%;
+    height: 500px;
+    width: 500px;
+
+    font-weight: bold;
+    font-size: 220px;
+    color: var(--selected-nav-color);
+
+    overflow: hidden;
+
+    z-index: -99;
+}
+
+.layer{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.layer .content__wrap {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+  }
+
+.content__body {
+    height: 500px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom {
+    background-color: var(--selected-bg-color);
+    z-index: 1;
+}
+
+.top {
+    background-color: var(--selected-bg-color);
+    color: var(--selected-nav-color);
+    z-index: 2;
+    width: 250px;
+}
+
+.handle {
+    position: absolute;
+    display: block;
+    background-color: #EBD070;
+    width:5px;
+    top:50%;
+    left: 150px;
+    z-index:3;
+
+    transform: translateY(-50%);
+    height: 200%;
+    transform-origin:top;
+}
+
+.top{
+    margin-left:-1000px;
+    width: calc(150px + 1000px);
+}
+
+.top .content__wrap{
+    margin-left: 1000px;
+}
+
+.watermark text {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Opera and Firefox */
+}
