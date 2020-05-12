@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import style from './style.module.css'
 
-let wmposition;
+let wmposition: number;
 const WaterMark = () => {
     const [skew, setSkew] = useState(0)
 

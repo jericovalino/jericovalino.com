@@ -12,7 +12,7 @@ const ThemeSwitch = () => {
     const switchProp = {'backgroundColor' : '#484848', 'borderColor': '#202020'};
 
     return (
-        <div className={style.ToggleSwitch} onClick={switchTheme} style={switchProp}>
+        <div className={style.ToggleSwitch} onClick={() => switchTheme} style={switchProp}>
             <div className={style.lever} style={!darkMode ? leverProp[0] : leverProp[1]}>
             </div>
         </div>

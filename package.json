@@ -2,7 +2,7 @@
   "name": "active-class-name",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
+    "dev": "next && tsc .",
     "build": "next build",
     "start": "next start"
   },
@@ -12,5 +12,10 @@
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^13.13.5",
+    "@types/react": "^16.9.35",
+    "typescript": "^3.8.3"
+  }
 }
