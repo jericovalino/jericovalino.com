@@ -2,12 +2,17 @@ import React, { useState, useEffect } from 'react';
 import style from './style.module.css'
 
 let wmposition: number;
+let windowWidth: number;
 const WaterMark = () => {
     const [skew, setSkew] = useState(0)
 
     useEffect(() => {
+        windowWidth = innerWidth;
+    })
+
+    useEffect(() => {
         wmposition = Math.ceil(document.getElementById('wm').getBoundingClientRect().x)
-    }, [])
+    }, [windowWidth])
 
     const onMouseHover = (e) => {
         setSkew(e.clientX - wmposition)

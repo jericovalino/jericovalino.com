@@ -6,7 +6,7 @@ export const useTheme = () => {
     const [darkMode, setDarkMode] = useState(false);
 
     const switchTheme = () => {
-        localStorage.setItem('darkmode', !darkMode);
+        localStorage.setItem('darkmode', `${!darkMode}`);
         setDarkMode(!darkMode)
         darkMode ? localStorage.removeItem('darkmode') : null;
     }

@@ -8,7 +8,7 @@
   },
   "author": "Remy Sharp <remy@leftlogic.com>",
   "dependencies": {
-    "next": "latest",
+    "next": "^9.4.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
   },
