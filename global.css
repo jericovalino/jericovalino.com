@@ -1,4 +1,7 @@
 :root{
+
+    --primary-color: #EBD070;
+
     /* Set the deafult values == light */
     --selected-bg-color: var(--light-bg-color);
     --selected-nav-color: var(--light-nav-color);

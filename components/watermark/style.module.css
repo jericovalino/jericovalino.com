@@ -1,7 +1,6 @@
 .watermark {
-    position: fixed;
-    top: calc(50% - 250px);
-    right: 5%;
+    display: none;
+    position: relative;
     height: 500px;
     width: 500px;
 
@@ -10,8 +9,6 @@
     color: var(--selected-nav-color);
 
     overflow: hidden;
-
-    /* z-index: -99; */
 }
 
 .watermark::before {
@@ -60,7 +57,7 @@
 .handle {
     position: absolute;
     display: block;
-    background-color: #EBD070;
+    background-color: var(--primary-color);
     width:5px;
     top:50%;
     left: 0px;
@@ -115,5 +112,11 @@
     }
     100% {
         width: calc(0px + 1000px);
+    }
+}
+
+@media (min-width: 1000px) {
+    .watermark {
+        display: block;
     }
 }

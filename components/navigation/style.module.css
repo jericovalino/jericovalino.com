@@ -16,7 +16,7 @@
 .main__nav__item {
     width: 50px;
     height: 50px;
-    background-color: #EBD070;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
@@ -55,8 +55,8 @@
     margin-left: 5px;
     align-self: flex-start;
     justify-content: flex-end;
-    border-left: 2px solid #EBD070;
-    border-right: 2px solid #EBD070;
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
     border-radius: 0;
 }
 

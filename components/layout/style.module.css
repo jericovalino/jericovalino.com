@@ -1,0 +1,8 @@
+.Layout {
+    width: 100%;
+}
+
+.content {
+    margin-left: 50px;
+    width: calc(100vw - 50px);
+}
