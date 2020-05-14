@@ -13,6 +13,11 @@ const IndexPage = () => {
         <title>jerico</title>
       </Head>
       <Navigation />
+      <main className={style.content}>
+        <h1>Awesome every Pixels.</h1>
+        <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website to deliver awesome experience to the user.</p>
+      </main>
+      <button className={style.mainBtn}>Send Me An Email</button>
       <WaterMark />
     </div>
   )

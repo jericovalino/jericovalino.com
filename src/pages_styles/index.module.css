@@ -1,3 +1,39 @@
 .Index {
     width: 100%;
 }
+
+.content {
+    margin-top: 3em;
+    margin-left: calc(3em + 50px);
+    width: 45vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.content h1 {
+    font-size: 36px;
+    color: grey
+}
+
+.content p {
+    font-size: 24px;
+    color: grey;
+}
+
+.mainBtn {
+    width: 233px;
+    height: 49px;
+    border: none;
+    background-color: #EBD070;
+    border-radius: 9px;
+    
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+
+    align-self: flex-end;
+    position: relative;
+    left: 90px;
+}
