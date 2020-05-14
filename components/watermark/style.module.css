@@ -63,17 +63,21 @@
     background-color: #EBD070;
     width:5px;
     top:50%;
-    left: 150px;
+    left: 0px;
     z-index:3;
 
     transform: translateY(-50%);
     height: 200%;
     transform-origin:top;
+
+    animation: handle 1500ms ease-in-out 3000ms alternate 1;
 }
 
 .top{
     margin-left:-1000px;
-    width: calc(150px + 1000px);
+    width: calc(0px + 1000px);
+
+    animation: top 1500ms ease-in-out 3000ms alternate 1;
 }
 
 .top .content__wrap{
@@ -88,4 +92,28 @@
         -ms-user-select: none; /* Internet Explorer/Edge */
             user-select: none; /* Non-prefixed version, currently
                                   supported by Chrome, Opera and Firefox */
+}
+
+@keyframes handle {
+    0% {
+        left: 0px;
+    }
+    50% {
+        left: 500px;
+    }
+    100% {
+        left: 0px;
+    }
+}
+
+@keyframes top {
+    0% {
+        width: calc(0px + 1000px);
+    }
+    50% {
+        width: calc(500px + 1000px);
+    }
+    100% {
+        width: calc(0px + 1000px);
+    }
 }
