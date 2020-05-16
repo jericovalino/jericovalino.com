@@ -28,9 +28,12 @@ const Navigation = () => {
                         <ProjectsIcon width="30px" height="30px" />
                     </div>
                 </Link>
+                <Link href={'/contact'}>
                 <div className={style.nav__item}>
                     <HomeIcon width="25px" height="25px" />
                 </div>
+                </Link>
+                
 
                 <div className={style.ThemeSwitch}>
                     <ThemeSwitch />
