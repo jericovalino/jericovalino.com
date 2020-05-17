@@ -3,9 +3,9 @@ import style from './style.module.css';
 import Link from 'next/link';
 
 import ThemeSwitch from '../themeSwitcher';
-import UserIcon from '../../src/public/vectors/userIcon';
-import ProjectsIcon from '../../src/public/vectors/projectsIcon';
-import HomeIcon from '../../src/public/vectors/homeIcon';
+import UserIcon from '../../public/vectors/userIcon';
+import ProjectsIcon from '../../public/vectors/projectsIcon';
+import HomeIcon from '../../public/vectors/homeIcon';
 
 const Navigation = () => {
 

@@ -11,6 +11,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet" />
+                    <link rel="shortcut icon" href="/favicon.ico" />
                 </Head>
                 <body>
                     <Main />
