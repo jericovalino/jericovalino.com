@@ -3,9 +3,9 @@ import style from './style.module.css';
 import Link from 'next/link';
 
 import ThemeSwitch from '../themeSwitcher';
-import UserIcon from '../../src/public/vectors/userIcon';
-import ProjectsIcon from '../../src/public/vectors/projectsIcon';
-import HomeIcon from '../../src/public/vectors/homeIcon';
+import UserIcon from '../../public/vectors/userIcon';
+import ProjectsIcon from '../../public/vectors/projectsIcon';
+import HomeIcon from '../../public/vectors/homeIcon';
 
 const Navigation = () => {
 
@@ -28,9 +28,12 @@ const Navigation = () => {
                         <ProjectsIcon width="30px" height="30px" />
                     </div>
                 </Link>
+                <Link href={'/contact'}>
                 <div className={style.nav__item}>
                     <HomeIcon width="25px" height="25px" />
                 </div>
+                </Link>
+                
 
                 <div className={style.ThemeSwitch}>
                     <ThemeSwitch />
@@ -40,4 +43,4 @@ const Navigation = () => {
     )
 }
 
-export default Navigation;
+export default React.memo(Navigation);
