@@ -13,7 +13,10 @@ const Portfolio = () => {
 
 
       <div className={style.Portfolio}>
-
+        <main className={style.content}>
+          <h1>Projects</h1>
+          <p>coming soon...</p>
+        </main>
       </div>
 
     </Layout>

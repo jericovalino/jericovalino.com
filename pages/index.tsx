@@ -16,7 +16,7 @@ const IndexPage = () => {
       <div className={style.Index}>
         <main className={style.content}>
           <h1>Awesome every Pixels.</h1>
-          <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website to deliver awesome experience to the user.</p>
+          <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
           <div className={style.nameTag}>
             <div className={style.dp}>
               <img src={'/images/me.jpeg'} />
