@@ -9,18 +9,28 @@
     /* Set the 'light' theme */
     --light-bg-color: #FFF;
     --light-nav-color: #393D46;
-    --light-font-color: #000000;
+    --light-font-color: #000;
     /* Set the 'dark' theme */
     --dark-bg-color: #232323;
     --dark-nav-color: #343434;
-    --dark-font-color: #ffffff
+    --dark-font-color: #FFF;
+
+
+    /* for github icon */
+    --selected-git-color: var(--light-git-color);
+    --dark-git-color: #EEE;
+    --light-git-color: #232323;
+    /* for linkedin icon */
+    --selected-in-color: var(--light-in-color);
+    --dark-in-color: #EEE;
+    --light-in-color: #006087;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    transition-property: background-color, color;
-    transition-duration: 300ms;
+    transition-property: background-color, color, fill;
+    transition-duration: 150ms;
     transition-timing-function: ease-in-out;
 }
 

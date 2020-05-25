@@ -1,0 +1,7 @@
+.github {
+    fill: var(--selected-git-color);
+}
+
+.linkedin {
+    fill: var(--selected-in-color);
+}
