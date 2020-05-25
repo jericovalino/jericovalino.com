@@ -14,8 +14,23 @@ const Portfolio = () => {
 
       <div className={style.Portfolio}>
         <main className={style.content}>
-          <h1>Projects</h1>
-          <p>coming soon...</p>
+
+
+          <div className={style.card}>
+            <img src={'/images/personal.png'}></img>
+          </div>
+
+          <div className={style.card}>
+            <img src={'/images/yakad.png'}></img>
+          </div>
+
+          <div className={style.card}>
+            <img src={'/images/burger builder.png'}></img>
+          </div>
+
+          <div className={style.card}>
+            <img src={'/images/detection.png'}></img>
+          </div>
         </main>
       </div>
 
