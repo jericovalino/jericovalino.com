@@ -8,12 +8,10 @@
     box-shadow: 0 10px 20px rgba(0,0,0,0.19),
                 0 6px 6px rgba(0,0,0,0.23);
     margin: 1em;
-    cursor: pointer;
 }
 
 .overlay {
     position: absolute;
-    /* right: -100%; */
     width: 100%;
     height: 100%;
     background-color: whitesmoke;
@@ -40,14 +38,21 @@
     padding: 1em;
 }
 
-.overlay section p {
-    margin: 0;
+.Card span {
+    display: none;
     position: absolute;
     bottom: 1em;
     right: 1em;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transform: rotate(0deg);
+    transition: transform 300ms ease-in-out;
 }
 
-
+.Card span:hover {
+    transform: rotate(360deg);
+}
 
 .overlay h3 {
     margin: 0;
@@ -55,8 +60,11 @@
 }
 
 .Card:hover .overlay {
-    /* right: 0%; */
     opacity: .8;
+}
+
+.Card:hover span {
+    display: initial;
 }
 
 .Card img {

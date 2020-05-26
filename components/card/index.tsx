@@ -1,6 +1,8 @@
 import React from 'react';
 import style from './style.module.css'
 
+import OpenIcon from '../../public/vectors/openIcon';
+
 const Card = (props) => {
     return (
         <div className={style.Card}>
@@ -10,9 +12,9 @@ const Card = (props) => {
                 </header>
                 <section>
                     {props.children}
-                    <p>open</p>
                 </section>
             </div>
+            <span><OpenIcon /></span>
             <img src={props.imgUrl}></img>
         </div>
     )
