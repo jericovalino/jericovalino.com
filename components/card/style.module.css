@@ -1,0 +1,64 @@
+.Card {
+    position: relative;
+    width: 250px;
+    height: 150px;
+    border-radius: 1em;
+    overflow: hidden;
+    background-color: var(--light-nav-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19),
+                0 6px 6px rgba(0,0,0,0.23);
+    margin: 1em;
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    /* right: -100%; */
+    width: 100%;
+    height: 100%;
+    background-color: whitesmoke;
+    opacity: 0;
+    transition: all 200ms ease-in-out;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.overlay header {
+    height: 20%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--light-nav-color);
+}
+
+.overlay section {
+    width: 100%;
+    height: 80%;
+    padding: 1em;
+}
+
+.overlay section p {
+    margin: 0;
+    position: absolute;
+    bottom: 1em;
+    right: 1em;
+}
+
+
+
+.overlay h3 {
+    margin: 0;
+    color: white;
+}
+
+.Card:hover .overlay {
+    /* right: 0%; */
+    opacity: .8;
+}
+
+.Card img {
+    width: inherit;
+}
