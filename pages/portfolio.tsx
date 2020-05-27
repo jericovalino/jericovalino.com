@@ -1,9 +1,11 @@
 import React from 'react';
-import style from '../src/pages_styles/portfolio.module.css';
 import Head from 'next/head';
+import style from '../src/pages_styles/portfolio.module.css';
 
 import Layout from '../components/layout';
 import Card from '../components/card';
+
+const { portfolio, content } = style;
 
 const Portfolio = () => {
   return (
@@ -12,8 +14,8 @@ const Portfolio = () => {
         <title>portfolio</title>
       </Head>
 
-      <div className={style.Portfolio}>
-        <main className={style.content}>
+      <div className={portfolio}>
+        <main className={content}>
 
           <Card title={'JERICOVALNO'} imgUrl={'/images/personal.png'}>Elit mollit incididunt magna consequat enim.</Card>
           <Card title={'YAKADAPP'} imgUrl={'/images/yakad.png'}>Elit mollit incididunt magna consequat enim.</Card>

@@ -3,10 +3,12 @@ import style from './style.module.css'
 
 import OpenIcon from '../../public/vectors/openIcon';
 
+const { card, overlay } = style;
+
 const Card = (props) => {
     return (
-        <div className={style.Card}>
-            <div className={style.overlay}>
+        <div className={card}>
+            <div className={overlay}>
                 <header>
                     <h3>{props.title}</h3>
                 </header>

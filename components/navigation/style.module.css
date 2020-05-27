@@ -44,7 +44,7 @@
     cursor: pointer;
 }
 
-.ThemeSwitch {
+.theme_switch {
     margin-top: auto;
     margin-bottom: 1em;
 }
@@ -60,7 +60,8 @@
     border-radius: 0;
 }
 
-.main__nav__item text {
+.main__nav__item p {
+    margin: 0;
     position: absolute;
     top: -5px;
     right: 5px;

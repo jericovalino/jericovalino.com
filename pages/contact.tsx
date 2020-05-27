@@ -1,8 +1,9 @@
 import React from 'react';
-import style from '../src/pages_styles/contact.module.css';
 import Head from 'next/head';
-
+import style from '../src/pages_styles/contact.module.css';
 import Layout from '../components/layout'
+
+const {contact} = style;
 
 const Contact = () => {
   return (
@@ -12,7 +13,7 @@ const Contact = () => {
       </Head>
 
 
-      <div className={style.Contact}>
+      <div className={contact}>
 
       </div>
 

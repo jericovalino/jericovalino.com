@@ -3,8 +3,11 @@ import style from './style.module.css'
 
 let wmposition: number;
 let windowWidth: number;
+
+const { watermark, layer, top, bottom, content__wrap, content__body, handle } = style;
+
 const WaterMark = () => {
-    const [skew, setSkew] = useState(0)
+    const [slide, setSlide] = useState(0)
 
     useEffect(() => {
         windowWidth = innerWidth;
@@ -15,32 +18,30 @@ const WaterMark = () => {
     }, [windowWidth])
 
     const onMouseHover = (e) => {
-        setSkew(e.clientX - wmposition)
+        setSlide(e.clientX - wmposition)
     }
 
     return (
-        <div id={'wm'} className={style.watermark} onMouseMove={onMouseHover}>
-
-            <div className={[style.layer, style.bottom].join(' ')}>
-                <div className={style.content__wrap}>
-                    <div className={style.content__body}>
-                        <text>JER</text>
-                        <text>ICO</text>
+        <div id={'wm'} className={watermark} onMouseMove={onMouseHover}>
+            <div className={[layer, bottom].join(' ')}>
+                <div className={content__wrap}>
+                    <div className={content__body}>
+                        <p>JER</p>
+                        <p>ICO</p>
                     </div>
                 </div>
             </div>
 
-            <div className={[style.layer, style.top].join(' ')} style={{ width: `${skew + 1000}px` }}>
-                <div className={style.content__wrap}>
-                    <div className={style.content__body}>
-                        <text>VAL</text>
-                        <text>INO</text>
+            <div className={[layer, top].join(' ')} style={{ width: `${slide + 1000}px` }}>
+                <div className={content__wrap}>
+                    <div className={content__body}>
+                        <p>VAL</p>
+                        <p>INO</p>
                     </div>
                 </div>
             </div>
 
-            <div className={style.handle} style={{ left: `${skew}px` }}></div>
-
+            <div className={handle} style={{ left: `${slide}px` }}></div>
         </div>
     )
 }
