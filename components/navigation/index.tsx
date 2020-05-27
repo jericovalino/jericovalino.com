@@ -7,7 +7,7 @@ import UserIcon from '../../public/vectors/userIcon';
 import ProjectsIcon from '../../public/vectors/projectsIcon';
 import HomeIcon from '../../public/vectors/homeIcon';
 
-const { navbar, nav__item, main__nav__item, js, html, css, theme_switch } = style;
+const { navbar, nav__item, nav__icon, main__nav__item, js, html, css, theme_switch } = style;
 
 const Navigation = () => {
 
@@ -32,17 +32,26 @@ const Navigation = () => {
 
             <Link href={'/'}>
                 <div className={nav__item}>
-                    <UserIcon width="30px" height="30px" />
+                    <div className={nav__icon}>
+                        <UserIcon width="100%" height="100%" />
+                    </div>
+                    <p>Home</p>
                 </div>
             </Link>
             <Link href={'/portfolio'}>
                 <div className={nav__item}>
-                    <ProjectsIcon width="30px" height="30px" />
+                    <div className={nav__icon}>
+                        <ProjectsIcon width="100%" height="100%" />
+                    </div>
+                    <p>Project</p>
                 </div>
             </Link>
             <Link href={'/contact'}>
                 <div className={nav__item}>
-                    <HomeIcon width="25px" height="25px" />
+                    <div className={nav__icon}>
+                        <HomeIcon width="100%" height="100%" />
+                    </div>
+                    <p>Contact</p>
                 </div>
             </Link>
 
