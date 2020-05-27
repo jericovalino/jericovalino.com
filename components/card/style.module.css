@@ -38,7 +38,7 @@
     padding: 1em;
 }
 
-.Card span {
+.card span {
     display: none;
     position: absolute;
     bottom: 1em;
@@ -50,7 +50,7 @@
     transition: transform 300ms ease-in-out;
 }
 
-.Card span:hover {
+.card span:hover {
     transform: rotate(360deg);
 }
 
@@ -59,14 +59,14 @@
     color: white;
 }
 
-.Card:hover .overlay {
+.card:hover .overlay {
     opacity: .8;
 }
 
-.Card:hover span {
+.card:hover span {
     display: initial;
 }
 
-.Card img {
+.card img {
     width: inherit;
 }
