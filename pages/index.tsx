@@ -9,7 +9,7 @@ import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
-const { index, social_accounts, content, name_tag, dp, main_btn, watermark} = style;
+const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
 const IndexPage = () => {
   return (
@@ -25,7 +25,7 @@ const IndexPage = () => {
         </div>
 
         <main className={content}>
-          <h1>Awesome every Pixels.</h1>
+          <h1>Awesome every Pixel.</h1>
           <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
           <div className={name_tag}>
             <div className={dp}>

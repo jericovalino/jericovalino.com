@@ -49,7 +49,7 @@ const Navigation = () => {
             <Link href={'/contact'}>
                 <div className={nav__item}>
                     <div className={nav__icon}>
-                        <HomeIcon width="100%" height="100%" />
+                        <HomeIcon width="90%" height="90%" />
                     </div>
                     <p>Contact</p>
                 </div>

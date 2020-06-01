@@ -111,6 +111,9 @@
     .nav__icon {
         width: 30px;
         height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     
     .nav__item p {
@@ -124,8 +127,6 @@
 
     .nav__item:hover {
         width: 120px;
-        padding-right: 10px;
-        margin-left: 5px;
         align-self: flex-start;
         justify-content: space-evenly;
         border-left: 2px solid var(--primary-color);

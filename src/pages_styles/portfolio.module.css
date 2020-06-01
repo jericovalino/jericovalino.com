@@ -10,8 +10,6 @@
     height: fit-content;
     margin-top: 2em;
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
     flex-wrap: wrap;
 
     /* border: 1px solid black; */
