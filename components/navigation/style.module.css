@@ -81,10 +81,6 @@
     background-color: #F06529;
     display: flex;
     justify-content: center;
-
-    transition-property: left;
-    transition-duration: 200ms;
-    transition-timing-function: ease-out;
 }
 
 .css {
@@ -92,10 +88,6 @@
     position: absolute;
     left: 0px;
     background-color: #2965F1;
-
-    transition-property: left;
-    transition-duration: 300ms;
-    transition-timing-function: ease-out;
 }
 
 .html h1, .css h1 {

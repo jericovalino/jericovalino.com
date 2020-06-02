@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import style from './style.module.css';
 import Link from 'next/link';
 
+import { motion } from 'framer-motion';
+
 import ThemeSwitch from '../themeSwitch';
 import UserIcon from '../../public/vectors/userIcon';
 import ProjectsIcon from '../../public/vectors/projectsIcon';
@@ -19,16 +21,16 @@ const Navigation = () => {
                 onClick={() => setShow(!show)}>
                 <h1>{show ? 'JS' : 'JV'}</h1>
             </div>
-            <div className={[main__nav__item, html].join(' ')}
-                style={{ left: show ? '50px' : '0px' }}>
+            <motion.div className={[main__nav__item, html].join(' ')}
+                animate={{ left: show ? '50px' : '0px' }}>
                 <p>5</p>
                 <h1>HTML</h1>
-            </div>
-            <div className={[main__nav__item, css].join(' ')}
-                style={{ left: show ? '100px' : '0px' }}>
+            </motion.div>
+            <motion.div className={[main__nav__item, css].join(' ')}
+                animate={{ left: show ? '100px' : '0px' }}>
                 <p>3</p>
                 <h1>CSS</h1>
-            </div>
+            </motion.div>
 
             <Link href={'/'}>
                 <div className={nav__item}>

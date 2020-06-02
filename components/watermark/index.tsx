@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import style from './style.module.css'
+import style from './style.module.css';
+import { motion } from 'framer-motion';
 
 let wmposition: number;
 let windowWidth: number;
@@ -32,16 +33,16 @@ const WaterMark = () => {
                 </div>
             </div>
 
-            <div className={[layer, top].join(' ')} style={{ width: `${slide + 1000}px` }}>
+            <motion.div className={[layer, top].join(' ')} animate={{ width: `${slide + 1000}px` }}>
                 <div className={content__wrap}>
                     <div className={content__body}>
                         <p>VAL</p>
                         <p>INO</p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <div className={handle} style={{ left: `${slide}px` }}></div>
+            <motion.div className={handle} animate={{ left: `${slide}px` }}></motion.div>
         </div>
     )
 }
