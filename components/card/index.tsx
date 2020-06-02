@@ -1,13 +1,24 @@
 import React from 'react';
 import style from './style.module.css'
 
+import { motion } from 'framer-motion';
+
 import OpenIcon from '../../public/vectors/openIcon';
 
 const { card, overlay } = style;
 
 const Card = (props) => {
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1
+        }
+    };
+
     return (
-        <div className={card}>
+        <motion.div className={card} variants={item}>
             <div className={overlay}>
                 <header>
                     <h3>{props.title}</h3>
@@ -18,7 +29,7 @@ const Card = (props) => {
             </div>
             <span><OpenIcon /></span>
             <img src={props.imgUrl}></img>
-        </div>
+        </motion.div>
     )
 }
 
