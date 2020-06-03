@@ -2,7 +2,6 @@ import React from 'react';
 import style from '../src/pages_styles/index.module.css';
 import Head from 'next/head';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 
 import Layout from '../components/layout';
 import WaterMark from '../components/watermark';
@@ -39,7 +38,7 @@ const IndexPage = () => {
           </div>
 
           <Link href={'/portfolio'}>
-            <motion.button initial={{x: 100}} animate={{x: 0}} className={main_btn}>view portfolio</motion.button>
+            <button className={main_btn}>view portfolio</button>
           </Link>
         </main>
         <div className={watermark}>
