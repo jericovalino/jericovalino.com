@@ -26,12 +26,11 @@ const Blogs = ({filenames}) => {
                 }   
             </ul>
       </div>
-
     </Layout>
   )
 }
 
-export const getServerSideProps = async() => {
+export const getStaticProps = async() => {
     const files = fs.readdirSync("src/blog/posts");
     const filenames = files.map(filename => filename.replace(".md", ""))
 
