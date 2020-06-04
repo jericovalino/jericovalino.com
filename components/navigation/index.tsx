@@ -8,6 +8,7 @@ import ThemeSwitch from '../themeSwitch';
 import UserIcon from '../../public/vectors/userIcon';
 import ProjectsIcon from '../../public/vectors/projectsIcon';
 import HomeIcon from '../../public/vectors/homeIcon';
+import BlogIcon from '../../public/vectors/blogIcon';
 
 const { navbar, nav__item, nav__icon, main__nav__item, js, html, css, theme_switch } = style;
 
@@ -46,6 +47,14 @@ const Navigation = () => {
                         <ProjectsIcon width="100%" height="100%" />
                     </div>
                     <p>Project</p>
+                </div>
+            </Link>
+            <Link href={'/blogs'}>
+                <div className={nav__item}>
+                    <div className={nav__icon}>
+                        <BlogIcon width="90%" height="90%" />
+                    </div>
+                    <p>Blog</p>
                 </div>
             </Link>
             <Link href={'/contact'}>

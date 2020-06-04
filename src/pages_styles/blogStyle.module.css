@@ -15,6 +15,11 @@
     width: 100%;
 }
 
+.post a {
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
 .post p {
     display: block;
     text-justify: inter-ideograph;
@@ -27,7 +32,7 @@
 }
 
 .post img {
-    width: 100%;
+    max-width: 100%;
 }
 
 .content {

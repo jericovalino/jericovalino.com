@@ -1,7 +1,7 @@
 import React from 'react';
 import style from '../../src/pages_styles/blogStyle.module.css';
 import Head from 'next/head';
-import fs, { readFileSync } from 'fs';
+import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
@@ -43,7 +43,7 @@ export const getStaticPaths = async() => {
 
 export const getStaticProps = async({params: {slug}}) => {
 
-    const file = readFileSync(path.join("src/blog/posts", slug + ".md")).toString();
+    const file = fs.readFileSync(path.join("src/blog/posts", slug + ".md")).toString();
     const parsedMarkdown = matter(file);
     const markdownhtml = marked(parsedMarkdown.content)
     return{

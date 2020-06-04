@@ -10,7 +10,7 @@ This is a project that utilize opensource machine learning and machine vision to
 
 Before                     |  After
 :-------------------------:|:-------------------------:
-<img src="https://github.com/jericovalino/Flex-Defect-Detection/blob/master/extra/detection.PNG" alt="GUI" width="430"/>  |  <img src="https://github.com/jericovalino/Flex-Defect-Detection/blob/master/extra/detection1.PNG" alt="GUI" width="430"/>
+<img src="https://raw.githubusercontent.com/jericovalino/Flex-Defect-Detection/master/extra/detection.PNG" alt="GUI" width="430"/>  |  <img src="https://raw.githubusercontent.com/jericovalino/Flex-Defect-Detection/master/extra/detection1.PNG" alt="GUI" width="430"/>
 
 
 
@@ -23,7 +23,7 @@ To train the model, you can follow the instructions from my previous [github rep
 Only 7 defective samples from FPCA(flex printed circuit assembly) Toshiba are used as a basis of the machine learning of what is failed. Then I took more than a couple of pictures of each samples with different angles/orientations. All in all, I've collected 23 images as a data to be used in training the model. <br/>
 Here are the image datasets I've used to train the model. 
 
-<img src="https://github.com/jericovalino/Flex-Defect-Detection/blob/master/extra/images.PNG" alt="GUI" width="420"/>
+<img src="https://raw.githubusercontent.com/jericovalino/Flex-Defect-Detection/master/extra/images.PNG" alt="GUI" width="420"/>
 
 You can download the label and the pre-trained M-RCNN model [here](https://drive.google.com/open?id=10P9eOnwiRWgtlqGMUap13Fp6I2S0Rr3g).
 
@@ -36,7 +36,7 @@ You can download the label and the pre-trained M-RCNN model [here](https://drive
 > In Desktop, click the mouse right button>> click "New">> click "Shortcut">> paste the absulute path of the script in the text field or you can click the "Browse" button and find the script>> click "Next">> type "Flex Defect Detection">> click "Finish" <br/>
 > You can also change the app icon.
 
-<img src="https://github.com/jericovalino/Flex-Defect-Detection/blob/master/extra/icon.PNG" alt="GUI" width="60"/>
+<img src="https://raw.githubusercontent.com/jericovalino/Flex-Defect-Detection/master/extra/icon.PNG" alt="GUI" width="60"/>
 
 #### User's Guide
 * To open the application, just double click your newly created shorcut in the Desktop. The window will open after a few seconds. <br/>
