@@ -1,3 +1,9 @@
+---
+    title: "Flex Defect Detection"
+---
+
+
+
 ## Flex-Defect-Detection
 
 This is a project that utilize opensource machine learning and machine vision tools(Google's Tensorflow with OpenCV ) to assist in identifying cosmetic defects for electronic products.

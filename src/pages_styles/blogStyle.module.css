@@ -4,6 +4,15 @@
     display: flex;
     justify-content: center;
     color: var(--selected-font-color);
+    overflow-x: hidden;
+}
+
+.post h1,
+.post h2,
+.post h3,
+.post h4 {
+    display: block;
+    width: 100%;
 }
 
 .post p {
