@@ -8,25 +8,25 @@ import marked from 'marked';
 
 import Layout from '../../components/layout';
 
-const Post = ({content, data}) => {
+const Post = ({ content, data }) => {
 
-    return(
+    return (
         <>
-        <Head>
-            <title>{data.title}</title>
-        </Head>
-        <Layout>
-            <div className={style.post}>
-                <main className={style.content} dangerouslySetInnerHTML={{__html: content}}>
-                    
-                </main>
-            </div>
-        </Layout>
+            <Head>
+                <title>{data.title}</title>
+            </Head>
+            <Layout>
+                <div className={style.post}>
+                    <main className={style.content} dangerouslySetInnerHTML={{ __html: content }}>
+
+                    </main>
+                </div>
+            </Layout>
         </>
     )
 }
 
-export const getStaticPaths = async() => {
+export const getStaticPaths = async () => {
 
     const files = fs.readdirSync("src/blog/posts");
     const paths = files.map(filename => ({
@@ -35,21 +35,21 @@ export const getStaticPaths = async() => {
         }
     }))
 
-    return{
+    return {
         paths,
         fallback: false
     };
 };
 
-export const getStaticProps = async({params: {slug}}) => {
+export const getStaticProps = async ({ params: { slug } }) => {
 
     const file = fs.readFileSync(path.join("src/blog/posts", slug + ".md")).toString();
     const parsedMarkdown = matter(file);
     const markdownhtml = marked(parsedMarkdown.content)
-    return{
+    return {
         props: {
-           data: parsedMarkdown.data,
-           content: markdownhtml 
+            data: parsedMarkdown.data,
+            content: markdownhtml
         }
     };
 };

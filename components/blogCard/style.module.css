@@ -1,0 +1,13 @@
+.blog_card {
+    width: 70vw;
+    height: 150px;
+    border-block-end: 1px solid var(--primary-color);
+    cursor: pointer;
+    margin: 1em;
+}
+
+.blog_card h1 {
+    color: var(--selected-font-color);
+    text-decoration: underline;
+    text-decoration-color: var(--primary-color);
+}

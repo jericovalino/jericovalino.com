@@ -22,7 +22,7 @@
 
 .post p {
     display: block;
-    text-justify: inter-ideograph;
+    text-align: justify;
 }
 
 .post pre {
