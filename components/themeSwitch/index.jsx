@@ -13,7 +13,7 @@ const ThemeSwitch = () => {
 
 
     return (
-        <div className={theme_switch} onClick={switchTheme as any}>
+        <div className={theme_switch} onClick={switchTheme}>
             <div className={lever} style={!darkMode ? leverProp[0] : leverProp[1]}>
             </div>
         </div>

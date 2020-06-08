@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import style from './style.module.css';
 import { motion } from 'framer-motion';
 
-let wmposition: number;
-let windowWidth: number;
+let wmposition;
+let windowWidth;
 
 const { watermark, layer, top, bottom, content__wrap, content__body, handle } = style;
 

@@ -18,7 +18,7 @@ const myReducer = (state = initState, action) => {
   }
 }
 
-let store = createStore(myReducer as any);
+let store = createStore(myReducer);
 
 store.subscribe(() => {
   console.log(store.getState())
