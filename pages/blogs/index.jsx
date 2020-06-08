@@ -27,9 +27,9 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getStaticProps = async () => {
-  const files = await fs.readdir("src/blog/posts");
-  const filenames = files.map(filename => filename.replace(".md", ""))
+export const getStaticProps = async ({res}) => {
+  const file = fs.readdirSync("src/blog/posts")
+  const filenames = file.map(filename => filename.replace(".md", ""))
 
   return {
     props: {
