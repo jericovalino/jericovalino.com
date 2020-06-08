@@ -27,9 +27,21 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getStaticProps = async ({res}) => {
-  const file = fs.readdirSync("src/blog/posts")
-  const filenames = file.map(filename => filename.replace(".md", ""))
+export const getStaticProps = async () => {
+
+  const filenames = await new Promise((res, rej) => {
+    fs.readdir("src/blog/posts", {encoding: 'utf8'}, (err, file) => {
+      if(err){
+        rej(err)
+      }else{
+        res(file)
+      }
+    })
+  }).then(
+    data => data.map(filename => filename.replace(".md", "")) 
+  ).catch(
+    err => console.log(err)
+  )
 
   return {
     props: {
