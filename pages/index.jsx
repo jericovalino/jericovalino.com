@@ -9,22 +9,21 @@ import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
-import { useSelector, useDispatch, connect } from 'react-redux'
+// import { useSelector, useDispatch, connect } from 'react-redux'
 
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
 const IndexPage = (props) => {
 
-  const blogs = useSelector(state => state)
-  console.log("index.js", blogs)
-  const dispatch = useDispatch();
+  // const blogs = useSelector(state => state)
+  // const dispatch = useDispatch();
 
-  const disFunc = () => {
-   dispatch({
-     type: "ADD-BLOG",
-     name: "ninja"
-   }) 
-  }
+  // const disFunc = () => {
+  //  dispatch({
+  //    type: "ADD-BLOG",
+  //    name: "ninja"
+  //  }) 
+  // }
 
   return (
     <Layout>

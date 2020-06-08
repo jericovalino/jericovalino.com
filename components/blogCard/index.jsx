@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const BlogCard = (props) => {
     return (
-        <Link prefetch={false} href={props.link}>
+        <Link href={props.link}>
             <div className={blog_card}>
                 <h1>
                     {props.children}
