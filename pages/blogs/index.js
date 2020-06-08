@@ -27,7 +27,7 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getServerSideProps = async () => {
+export async function getServerSideProps(){
   const files = fs.readdirSync("src/blog/posts");
   const filenames = files.map(filename => filename.replace(".md", ""))
 
@@ -36,7 +36,6 @@ export const getServerSideProps = async () => {
       filenames
     }
   }
-
   
 }
 
