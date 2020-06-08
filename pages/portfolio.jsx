@@ -27,7 +27,7 @@ const Portfolio = () => {
   return (
     <Layout>
       <Head>
-        <title>portfolio</title>
+        <title>Portfolio</title>
       </Head>
 
       <div className={portfolio}>

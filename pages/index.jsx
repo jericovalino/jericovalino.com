@@ -28,7 +28,7 @@ const IndexPage = (props) => {
   return (
     <Layout>
       <Head>
-        <title>jerico</title>
+        <title>Jerico Valino</title>
       </Head>
 
       <div className={index}>
