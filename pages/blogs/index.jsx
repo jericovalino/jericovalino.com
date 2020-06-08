@@ -27,7 +27,7 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getServerSideProps = async ({res}) => {
+export const getStaticProps = async () => {
 
   const filenames = await new Promise((res, rej) => {
     fs.readdir("src/blog/posts", {encoding: 'utf8'}, (err, file) => {
@@ -40,10 +40,7 @@ export const getServerSideProps = async ({res}) => {
   }).then(
     data => data.map(filename => filename.replace(".md", "")) 
   ).catch(
-    err => {
-      console.log(err);
-      res.statusCode = 405
-    }
+    err => console.log(err)
   )
 
   return {
