@@ -49,7 +49,7 @@ const Navigation = () => {
                     <p>Project</p>
                 </div>
             </Link>
-            <Link prefetch={false} href={'/blogs'}>
+            <Link href={'/blogs'}>
                 <div className={nav__item}>
                     <div className={nav__icon}>
                         <BlogIcon width="90%" height="90%" />
