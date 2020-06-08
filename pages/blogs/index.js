@@ -4,7 +4,7 @@ import style from '../../src/pages_styles/blogs.module.css';
 import Layout from '../../components/layout';
 import BlogCard from '../../components/blogCard';
 
-import fs from 'fs'
+import fs from 'fs';
 
 const { blogs } = style;
 
@@ -27,7 +27,7 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const files = fs.readdirSync("src/blog/posts");
   const filenames = files.map(filename => filename.replace(".md", ""))
 
@@ -36,6 +36,8 @@ export const getStaticProps = async () => {
       filenames
     }
   }
+
+  
 }
 
 export default Blogs;

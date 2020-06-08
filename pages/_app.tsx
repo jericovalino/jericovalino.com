@@ -1,15 +1,35 @@
 // import App from 'next/app'
 import '../global.css';
-// import Head from 'next/head';
 
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+const initState = {
+  blogs: ["yow"],
+  posts: []
+}
+
+const myReducer = (state = initState, action) => {
+  switch (action.type) {
+    case "ADD-BLOG":
+      return {...state, blogs: [...state.blogs, action.name]}
+    default:
+      return state
+  }
+}
+
+let store = createStore(myReducer as any);
+
+store.subscribe(() => {
+  console.log(store.getState())
+})
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      {/* <Head>
-        <link rel="shortcut icon" href="/favicon.ico" />
-      </Head> */}
+    <Provider store={store}>
       <Component {...pageProps} />
+    </Provider>
     </>
   )
 }

@@ -9,9 +9,23 @@ import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
+import { useSelector, useDispatch, connect } from 'react-redux'
+
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
-const IndexPage = () => {
+const IndexPage = (props) => {
+
+  const blogs = useSelector(state => state)
+  console.log("index.js", blogs)
+  const dispatch = useDispatch();
+
+  const disFunc = () => {
+   dispatch({
+     type: "ADD-BLOG",
+     name: "ninja"
+   }) 
+  }
+
   return (
     <Layout>
       <Head>
@@ -37,6 +51,10 @@ const IndexPage = () => {
             </section>
           </div>
 
+          {/* <button onClick={disFunc}>
+            dispatch
+          </button> */}
+
           <Link href={'/portfolio'}>
             <button className={main_btn}>view portfolio</button>
           </Link>
@@ -49,4 +67,4 @@ const IndexPage = () => {
   )
 }
 
-export default IndexPage
+export default IndexPage;
