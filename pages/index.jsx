@@ -15,7 +15,7 @@ const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = s
 
 const IndexPage = (props) => {
 
-  // const blogs = useSelector(state => state)
+  // const {count} = useSelector(state => state)
   // const dispatch = useDispatch();
 
   // const disFunc = () => {
@@ -52,7 +52,8 @@ const IndexPage = (props) => {
 
           {/* <button onClick={disFunc}>
             dispatch
-          </button> */}
+          </button>
+          <p>{count}</p> */}
 
           <Link href={'/portfolio'}>
             <button className={main_btn}>view portfolio</button>

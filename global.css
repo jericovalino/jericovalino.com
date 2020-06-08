@@ -6,14 +6,17 @@
     --selected-bg-color: var(--light-bg-color);
     --selected-nav-color: var(--light-nav-color);
     --selected-font-color: var(--light-font-color);
+    --selected-area-color: var(--light-area-color);
     /* Set the 'light' theme */
     --light-bg-color: #FFF;
     --light-nav-color: #393D46;
     --light-font-color: #000;
+    --light-area-color: #EEE;
     /* Set the 'dark' theme */
     --dark-bg-color: #232323;
     --dark-nav-color: #343434;
     --dark-font-color: #FFF;
+    --dark-area-color: #2B2B2B;
 
 
     /* for github icon */

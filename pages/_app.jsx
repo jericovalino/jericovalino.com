@@ -6,13 +6,16 @@ import { Provider } from 'react-redux';
 
 const initState = {
   blogs: ["yow"],
-  posts: []
+  count: 0
 }
 
 const myReducer = (state = initState, action) => {
   switch (action.type) {
     case "ADD-BLOG":
       return {...state, blogs: [...state.blogs, action.name]}
+    case "ADD-COUNT":
+      let count = state.count += 1; 
+      return {...state, count}
     default:
       return state
   }
