@@ -27,7 +27,7 @@ const Blogs = ({ filenames }) => {
   )
 }
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 
   const filenames = await new Promise((res, rej) => {
     fs.readdir("src/blog/posts", {encoding: 'utf8'}, (err, file) => {
