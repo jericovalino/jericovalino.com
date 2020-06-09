@@ -104,10 +104,11 @@ const Contact = () => {
 
       <div className={contact}>
         <div className={content}>
+          <h1 style={{margin: "0", color: "var(--selected-font-color)", fontSize: "x-large"}}>Send me a message</h1>
           <div className={form}>
             <label className={name_label}>Your Name</label>
-            <label className={email_label}>E-mail</label>
             <input className={name} value={formVal.name} onChange={nameChangeHandler}></input>
+            <label className={email_label}>E-mail</label>
             <input className={email} value={formVal.email} onChange={emailChangeHandler}></input>
             <label className={message_label}>Message</label>
             <textarea className={message} value={formVal.message} onChange={messageChangeHandler}></textarea>

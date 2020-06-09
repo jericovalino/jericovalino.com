@@ -1,25 +1,15 @@
-.navigation__bar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 50px;
-    height: 100%;
-    background-color: var(--selected-nav-color);
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    z-index: 99;
+.stacks {
+    height: 50px;
 }
 
 .main__nav__item {
+    position: absolute;
     width: 50px;
     height: 50px;
     background-color: var(--primary-color);
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    justify-content: center;
+    align-items: center;
     padding: 4px;
     cursor: pointer;
 }
@@ -27,11 +17,6 @@
 .main__nav__item h1 {
     margin: 0 0 -4px;
     color: #ebebeb;
-}
-
-.theme_switch {
-    margin-top: auto;
-    margin-bottom: 1em;
 }
 
 .main__nav__item p {
@@ -46,11 +31,11 @@
 
 .js {
     z-index: 3;
+    left: 0;
 }
 
 .html {
     z-index: 2;
-    position: absolute;
     left: 0px;
     background-color: #F06529;
     display: flex;
@@ -59,11 +44,42 @@
 
 .css {
     z-index: 1;
-    position: absolute;
     left: 0px;
     background-color: #2965F1;
 }
 
+.react {
+    z-index: 1;
+    left: 0px;
+    background-color: #232323;
+}
+
+.nodejs {
+    z-index: 0;
+    left: 0px;
+    background-color: #343434;
+}
+
+.psql {
+    z-index: -1;
+    left: 0px;
+    background-color: #635F5F;
+}
+
+.graphql {
+    z-index: -1;
+    left: 0px;
+    background-color: #D2D2D2;
+}
+
 .html h1, .css h1 {
     font-size: 16px;
+    align-self: flex-end;
+    margin-left: auto;
+}
+
+.js h1 {
+    color: #323330;
+    align-self: flex-end;
+    margin-left: auto;
 }

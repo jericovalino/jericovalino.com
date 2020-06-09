@@ -17,11 +17,7 @@
 }
 
 .form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 1fr 2fr 1fr 8fr;
-    grid-column-gap: 14px;
-    grid-row-gap: 0px;
+    display: block;
 }
     
 .name_label {
@@ -86,4 +82,14 @@
 
     margin-top: auto;
     cursor: pointer;
+}
+
+@media (min-width: 500px) {
+    .form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr 2fr 1fr 8fr;
+        grid-column-gap: 14px;
+        grid-row-gap: 0px;
+    }
 }
