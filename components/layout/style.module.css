@@ -6,3 +6,19 @@
     margin-left: 50px;
     width: calc(100vw - 50px);
 }
+
+.watermark {
+    position: fixed;
+    font-size: calc(10vh + 10vw);
+    color: rgba(0,0,0,.10);
+    margin: 0;
+    top: 17vh;
+    left: 35px;
+    z-index: -99;
+}
+
+@media (min-width: 1000px) {
+    .watermark {
+        top: 10vh;
+    }
+}

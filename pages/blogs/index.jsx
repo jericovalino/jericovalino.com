@@ -10,7 +10,7 @@ const { blogs } = style;
 
 const Blogs = ({ filenames }) => {
   return (
-    <Layout>
+    <Layout watermark={"blogs"}>
       <Head>
         <title>Blogs</title>
       </Head>

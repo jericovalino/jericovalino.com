@@ -79,7 +79,7 @@
     margin: 0;
     font-weight: bold;
     font-size: 220px;
-    color: var(--selected-nav-color);
+    color: rgba(0, 0, 0, .50);
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
      -khtml-user-select: none; /* Konqueror HTML */

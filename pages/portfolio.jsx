@@ -25,7 +25,7 @@ const Portfolio = () => {
   };
 
   return (
-    <Layout>
+    <Layout watermark={"portfolio"}>
       <Head>
         <title>Portfolio</title>
       </Head>

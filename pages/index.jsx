@@ -26,7 +26,7 @@ const IndexPage = (props) => {
   // }
 
   return (
-    <Layout>
+    <Layout watermark={"about"}>
       <Head>
         <title>Jerico Valino</title>
       </Head>

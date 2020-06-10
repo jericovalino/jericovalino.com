@@ -97,7 +97,7 @@ const Contact = () => {
   }
 
   return (
-    <Layout>
+    <Layout watermark={"contact"}>
       <Head>
         <title>Contact Me</title>
       </Head>
