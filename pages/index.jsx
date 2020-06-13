@@ -29,6 +29,9 @@ const IndexPage = (props) => {
     <Layout watermark={"about"}>
       <Head>
         <title>Jerico Valino</title>
+        <meta property="og:title" content="Awesome every Pixel" />
+        <meta property="og:image" content="/images/preview.png" />
+        <meta property="og:description" content="I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user." />
       </Head>
 
       <div className={index}>
@@ -65,6 +68,13 @@ const IndexPage = (props) => {
       </div>
     </Layout>
   )
+}
+
+export const getServerSideProps = async () => {
+
+  return {
+    props: {}
+  }
 }
 
 export default IndexPage;
