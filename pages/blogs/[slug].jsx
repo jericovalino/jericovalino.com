@@ -1,5 +1,5 @@
 import React from 'react';
-import style from '../../src/pages_styles/blogStyle.module.css';
+import style from '../../src/pages_styles/blog.module.css';
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';

@@ -27,7 +27,7 @@
 
 .email_label { 
     color: var(--selected-font-color);
-    grid-area: 1 / 2 / 2 / 3; 
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 .name { 
