@@ -9,21 +9,9 @@ import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
-// import { useSelector, useDispatch, connect } from 'react-redux'
-
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
 const IndexPage = (props) => {
-
-  // const {count} = useSelector(state => state)
-  // const dispatch = useDispatch();
-
-  // const disFunc = () => {
-  //  dispatch({
-  //    type: "ADD-BLOG",
-  //    name: "ninja"
-  //  }) 
-  // }
 
   return (
     <>
@@ -34,37 +22,35 @@ const IndexPage = (props) => {
         <meta property="og:description" content="I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user." />
       </Head>
 
-      <Layout watermark={"about"}>
+      <Layout watermark="about">
         <div className={index}>
-          <div className={social_accounts}>
-            <LinkedinIcon />
-            <GithubIcon />
-          </div>
-
           <div className={content}>
-            <h1>Awesome every Pixel.</h1>
-            <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
-            <div className={name_tag}>
-              <div className={dp}>
-                <img src={'/images/me.jpeg'} />
-              </div>
-              <section>
-                <h1>Jerico C. Valino</h1>
-                <p>React.js Web Developer</p>
-              </section>
+            <div className={social_accounts}>
+              <LinkedinIcon />
+              <GithubIcon />
             </div>
+            <section>
+              <h1>Awesome every Pixel.</h1>
+              <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
 
-            {/* <button onClick={disFunc}>
-            dispatch
-          </button>
-          <p>{count}</p> */}
+              <div className={name_tag}>
+                <div className={dp}>
+                  <img src={'/images/me.jpeg'} />
+                </div>
+                <section>
+                  <h1>Jerico C. Valino</h1>
+                  <p>React.js Web Developer</p>
+                </section>
+              </div>
 
-            <Link href={'/portfolio'}>
-              <button className={main_btn}>view portfolio</button>
-            </Link>
-          </div>
-          <div className={watermark}>
-            <WaterMark />
+              <Link href={'/portfolio'}>
+                <button className={main_btn}>view portfolio</button>
+              </Link>
+            </section>
+
+            <div className={watermark}>
+              <WaterMark />
+            </div>
           </div>
         </div>
       </Layout>
@@ -79,3 +65,15 @@ export const getServerSideProps = async () => {
 }
 
 export default IndexPage;
+
+  // import { useSelector, useDispatch, connect } from 'react-redux'
+
+  // const {count} = useSelector(state => state)
+  // const dispatch = useDispatch();
+
+  // const disFunc = () => {
+  //  dispatch({
+  //    type: "ADD-BLOG",
+  //    name: "ninja"
+  //  }) 
+  // }
