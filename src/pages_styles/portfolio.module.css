@@ -7,11 +7,9 @@
 
 .content {
     width: 90%;
-    height: fit-content;
     margin-top: 2em;
-    display: flex;
-    flex-wrap: wrap;
-
-    /* border: 1px solid black; */
-    /* overflow: auto; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto)); 
+    grid-auto-rows: 160px;
+    gap: 30px;
 }
