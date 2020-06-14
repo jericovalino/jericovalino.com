@@ -14,12 +14,12 @@ const Post = ({ content, data }) => {
         <>
             <Head>
                 <title>{data.title}</title>
+                <meta property="og:title" content={data.title} />
             </Head>
+
             <Layout>
                 <div className={style.post}>
-                    <main className={style.content} dangerouslySetInnerHTML={{ __html: content }}>
-
-                    </main>
+                    <main className={style.content} dangerouslySetInnerHTML={{ __html: content }} />
                 </div>
             </Layout>
         </>

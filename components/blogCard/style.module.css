@@ -6,9 +6,8 @@
     margin: 1em;
 }
 
-.blog_card h1 {
+.blog_card h3 {
     color: var(--selected-font-color);
     text-decoration: underline;
     text-decoration-color: var(--primary-color);
-    font-size: x-large;
 }

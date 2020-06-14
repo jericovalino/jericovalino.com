@@ -25,28 +25,28 @@ const Portfolio = () => {
   };
 
   return (
-    <Layout watermark={"portfolio"}>
+    <>
       <Head>
         <title>Portfolio</title>
       </Head>
 
-      <div className={portfolio}>
-        <motion.main
-          className={content}
-          variants={container}
-          initial="hidden"
-          animate="visible">
+      <Layout watermark={"portfolio"}>
+        <div className={portfolio}>
+          <motion.div
+            className={content}
+            variants={container}
+            initial="hidden"
+            animate="visible">
 
-          <Card title={'JERICOVALINO'} imgUrl={'/images/personal.png'} >Elit mollit incididunt magna consequat enim.</Card>
-          <Card title={'YAKADAPP'} imgUrl={'/images/yakad.png'} >Elit mollit incididunt magna consequat enim.</Card>
-          <Card title={'BURGERMAKER'} imgUrl={'/images/burger builder.png'} >Elit mollit incididunt magna consequat enim.</Card>
-          <Card title={'TENSORFLOW'} imgUrl={'/images/flexdetection.png'} >Elit mollit incididunt magna consequat enim.</Card>
-          <Card title={'FLUTTERAPP'} imgUrl={'/images/flutterIOTClient.png'} >Elit mollit incididunt magna consequat enim.</Card>
-
-        </motion.main>
-      </div>
-
-    </Layout>
+            <Card title={'JERICOVALINO'} imgUrl={'/images/personal.png'} >Elit mollit incididunt magna consequat enim.</Card>
+            <Card title={'YAKADAPP'} imgUrl={'/images/yakad.png'} >Elit mollit incididunt magna consequat enim.</Card>
+            <Card title={'BURGERMAKER'} imgUrl={'/images/burger builder.png'} >Elit mollit incididunt magna consequat enim.</Card>
+            <Card title={'TENSORFLOW'} imgUrl={'/images/flexdetection.png'} >Elit mollit incididunt magna consequat enim.</Card>
+            <Card title={'FLUTTERAPP'} imgUrl={'/images/flutterIOTClient.png'} >Elit mollit incididunt magna consequat enim.</Card>
+          </motion.div>
+        </div>
+      </Layout>
+    </>
   )
 }
 

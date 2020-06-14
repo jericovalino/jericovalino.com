@@ -26,7 +26,7 @@ const IndexPage = (props) => {
   // }
 
   return (
-    <Layout watermark={"about"}>
+    <>
       <Head>
         <title>Jerico Valino</title>
         <meta property="og:title" content="Awesome every Pixel" />
@@ -34,44 +34,45 @@ const IndexPage = (props) => {
         <meta property="og:description" content="I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user." />
       </Head>
 
-      <div className={index}>
-        <div className={social_accounts}>
-          <LinkedinIcon />
-          <GithubIcon />
-        </div>
-
-        <main className={content}>
-          <h1>Awesome every Pixel.</h1>
-          <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
-          <div className={name_tag}>
-            <div className={dp}>
-              <img src={'/images/me.jpeg'} />
-            </div>
-            <section>
-              <h1>Jerico C. Valino</h1>
-              <p>React.js Web Developer</p>
-            </section>
+      <Layout watermark={"about"}>
+        <div className={index}>
+          <div className={social_accounts}>
+            <LinkedinIcon />
+            <GithubIcon />
           </div>
 
-          {/* <button onClick={disFunc}>
+          <div className={content}>
+            <h1>Awesome every Pixel.</h1>
+            <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
+            <div className={name_tag}>
+              <div className={dp}>
+                <img src={'/images/me.jpeg'} />
+              </div>
+              <section>
+                <h1>Jerico C. Valino</h1>
+                <p>React.js Web Developer</p>
+              </section>
+            </div>
+
+            {/* <button onClick={disFunc}>
             dispatch
           </button>
           <p>{count}</p> */}
 
-          <Link href={'/portfolio'}>
-            <button className={main_btn}>view portfolio</button>
-          </Link>
-        </main>
-        <div className={watermark}>
-          <WaterMark />
+            <Link href={'/portfolio'}>
+              <button className={main_btn}>view portfolio</button>
+            </Link>
+          </div>
+          <div className={watermark}>
+            <WaterMark />
+          </div>
         </div>
-      </div>
-    </Layout>
+      </Layout>
+    </>
   )
 }
 
 export const getServerSideProps = async () => {
-
   return {
     props: {}
   }
