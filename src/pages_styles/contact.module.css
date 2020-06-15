@@ -40,13 +40,18 @@
 }
     
 .name_label {
-    color: var(--selected-font-color);
+    color: var(--selected-font-color); 
     grid-area: nameLabel;
 }
 
 .email_label { 
-    color: var(--selected-font-color);
+    color: var(--selected-font-color); 
     grid-area: mailLabel;
+}
+
+.message_label { 
+    color: var(--selected-font-color); 
+    grid-area: messageLabel;
 }
 
 .name { 
@@ -57,11 +62,6 @@
 .email { 
     grid-column: 2 / 3;
     grid-area: mail;
-}
-
-.message_label { 
-    color: var(--selected-font-color);
-    grid-area: messageLabel;
 }
 
 .message { 
@@ -93,7 +93,7 @@
     width: 200px;
     min-height: 40px;
     border: none;
-    background-color: var(--primary-color);
+    background-color: lightcoral;
     border-radius: 8px;
     
     color: white;
@@ -115,5 +115,9 @@
             "message   message"
             "message   message"
             "message   message";
+    }
+
+    .content {
+        height: 80%;
     }
 }

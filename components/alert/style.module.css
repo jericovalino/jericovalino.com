@@ -12,6 +12,7 @@
     flex-direction: column;
     align-items: center;
     z-index: 999;
+    animation: fade 200ms normal;
 }
 
 .alert h2 {
@@ -27,9 +28,18 @@
     background-color: lightcoral;
     color: white;
     font-size: medium;
+    cursor: pointer;
 }
 
 .hide {
     display: none;
 }
 
+@keyframes fade {
+    from {
+        transform: translateY(-150px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
