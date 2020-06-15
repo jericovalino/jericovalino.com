@@ -25,36 +25,36 @@ const Contact = () => {
     message: false
   })
 
-  const lineColorHandler = (isValid, blockName, e) => {
-    if (!isValid) {
-      e.target.style.borderBottom = "2px solid red";
-      if (blockName == "name") setValid({ ...valid, name: false})
-      else if (blockName == "email") setValid({ ...valid, email: false})
-      else if (blockName == "message") setValid({ ...valid, message: false})
+  const lineColorHandler = (isValid, event) => {
+    const { target: { id, style } } = event;
+    let value = {}
+    if (isValid) {
+      style.borderBottom = "2px solid var(--primary-color)";
+      value[id] = true;
+      setValid({ ...valid, ...value })
     } else {
-      e.target.style.borderBottom = "2px solid var(--primary-color)";
-      if (blockName == "name") setValid({ ...valid, name: true})
-      else if (blockName == "email") setValid({ ...valid, email: true})
-      else if (blockName == "message") setValid({ ...valid, message: true})
+      style.borderBottom = "2px solid red";
+      value[id] = false;
+      setValid({ ...valid, ...value })
     }
   }
 
   const nameChangeHandler = (e) => {
     setFormVal({ ...formVal, name: e.target.value });
-    const validate = String(e.target.value).length >= 4;
-    lineColorHandler(validate, e.target.id, e)
+    const validate = e.target.value.length >= 4;
+    lineColorHandler(validate, e)
   }
 
   const emailChangeHandler = (e) => {
     setFormVal({ ...formVal, email: e.target.value });
-    const validate = String(e.target.value).match(regex.email)
-    lineColorHandler(validate, e.target.id, e)
+    const validate = e.target.value.match(regex.email)
+    lineColorHandler(validate, e)
   }
 
   const messageChangeHandler = (e) => {
     setFormVal({ ...formVal, message: e.target.value });
-    const validate = String(e.target.value).length >= 9;
-    lineColorHandler(validate, e.target.id, e)
+    const validate = e.target.value.length >= 9;
+    lineColorHandler(validate, e)
   }
 
   const sendMessageHandler = () => {
@@ -83,7 +83,7 @@ const Contact = () => {
               <label className={email_label}>E-mail</label>
               <input id="email" className={email} value={formVal.email} onChange={emailChangeHandler} />
               <label className={message_label}>Message</label>
-              <textarea id="email" className={message} value={formVal.message} onChange={messageChangeHandler} />
+              <textarea id="message" className={message} value={formVal.message} onChange={messageChangeHandler} />
             </form>
             <button className={send_button} onClick={sendMessageHandler}>Send</button>
           </div>
