@@ -1,0 +1,35 @@
+.alert {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 150px);
+    width: 300px;
+    height: 300px;
+    padding: 1em;
+    color: var(--selected-font-color);
+    background-color: var(--selected-area-color);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 999;
+}
+
+.alert h2 {
+    margin-top: 0;
+}
+
+.alert button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    border: none;
+    background-color: lightcoral;
+    color: white;
+    font-size: medium;
+}
+
+.hide {
+    display: none;
+}
+

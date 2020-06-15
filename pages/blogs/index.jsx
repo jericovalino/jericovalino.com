@@ -2,7 +2,7 @@ import React from 'react';
 import Head from 'next/head';
 import style from '../../src/pages_styles/blogs.module.css';
 import Layout from '../../components/layout';
-import BlogCard from '../../components/blogCard';
+import BlogCard from '../../components/blogs/card';
 
 import fs from 'fs';
 

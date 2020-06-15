@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import Head from 'next/head';
 import style from '../src/pages_styles/contact.module.css';
-import Layout from '../components/layout'
 
+import Head from 'next/head';
+import Layout from '../components/layout';
+
+import Alert from '../components/alert';
 import regex from '../src/utils/regex';
+import { useDispatch } from 'react-redux';
 
 const { contact, content,
   form, name_label,
@@ -12,6 +15,8 @@ const { contact, content,
   message, send_button } = style;
 
 const Contact = () => {
+
+  const dispatchAlert = useDispatch();
 
   const [formVal, setFormVal] = useState({
     name: "",
@@ -25,17 +30,49 @@ const Contact = () => {
     message: false
   })
 
+  const sendMessageHandler = () => {
+    const { name, email, message } = valid;
+    if (name && email && message) {
+      fetch("https://uyi4098e01.execute-api.ap-south-1.amazonaws.com/beta",
+        { method: 'POST', body: JSON.stringify(formVal) })
+        .then(() => {
+          setFormVal({ name: "", email: "", message: "" });
+          setValid({ name: false, email: false, message: false });
+          dispatchAlert({
+            type: "SHOW-ALERT",
+            title: "Message Sent!",
+            body: "Thank you for messaging me. I'll get back to you soon."
+          })
+        })
+        .catch(() => {
+          setFormVal({ name: "", email: "", message: "" });
+          setValid({ name: false, email: false, message: false });
+          dispatchAlert({
+            type: "SHOW-ALERT",
+            title: "Message Sent!",
+            body: "Thank you for messaging me. I'll get back to you soon."
+          })
+        })
+    } else {
+      dispatchAlert({
+        type: "SHOW-ALERT",
+        title: "Oooppss..",
+        body: "Please fill out the form correctly."
+      })
+    }
+  }
+
   const lineColorHandler = (isValid, event) => {
     const { target: { id, style } } = event;
     let value = {}
     if (isValid) {
-      style.borderBottom = "2px solid var(--primary-color)";
       value[id] = true;
       setValid({ ...valid, ...value })
+      style.borderBottom = "2px solid var(--primary-color)";
     } else {
-      style.borderBottom = "2px solid red";
       value[id] = false;
       setValid({ ...valid, ...value })
+      style.borderBottom = "2px solid red";
     }
   }
 
@@ -57,33 +94,24 @@ const Contact = () => {
     lineColorHandler(validate, e)
   }
 
-  const sendMessageHandler = () => {
-    const { name, email, message } = valid;
-    if (name && email && message) {
-      fetch("https://uyi4098e01.execute-api.ap-south-1.amazonaws.com/beta",
-        { method: 'POST', body: JSON.stringify(formVal) })
-        .then(() => { setFormVal({ name: "", email: "", message: "" }) })
-        .catch(() => { setFormVal({ name: "", email: "", message: "" }) })
-    } else { alert("oooppss.. please fill out the form correctly.") }
-  }
-
   return (
     <>
       <Head>
         <title>Contact Me</title>
       </Head>
 
+      <Alert />
       <Layout watermark={"contact"}>
         <div className={contact}>
           <div className={content}>
             <h1>Send me a message</h1>
             <form className={form}>
               <label className={name_label}>Your Name</label>
-              <input id="name" className={name} value={formVal.name} onChange={nameChangeHandler} />
+              <input id="name" className={name} placeholder="name" value={formVal.name} onChange={nameChangeHandler} />
               <label className={email_label}>E-mail</label>
-              <input id="email" className={email} value={formVal.email} onChange={emailChangeHandler} />
+              <input id="email" className={email} placeholder="@" value={formVal.email} onChange={emailChangeHandler} />
               <label className={message_label}>Message</label>
-              <textarea id="message" className={message} value={formVal.message} onChange={messageChangeHandler} />
+              <textarea id="message" className={message} placeholder="..." value={formVal.message} onChange={messageChangeHandler} />
             </form>
             <button className={send_button} onClick={sendMessageHandler}>Send</button>
           </div>

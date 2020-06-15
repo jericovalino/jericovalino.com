@@ -5,7 +5,7 @@ import style from '../src/pages_styles/portfolio.module.css';
 import { motion } from 'framer-motion';
 
 import Layout from '../components/layout';
-import Card from '../components/card';
+import Card from '../components/portfolio/card';
 
 const { portfolio, content } = style;
 
