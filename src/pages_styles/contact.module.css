@@ -71,7 +71,7 @@
     height: 40vh;
     background-color: var(--selected-area-color);
     border: none;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid lightslategrey;
     color: var(--selected-font-color);
 } 
 
@@ -83,7 +83,7 @@
     height: 3em;
     background-color: var(--selected-area-color);
     border: none;
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid lightslategrey;
     display: inline-block;
     color: var(--selected-font-color);
 
