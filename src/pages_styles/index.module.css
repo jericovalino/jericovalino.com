@@ -73,16 +73,21 @@
     width: 200px;
     height: 40px;
     border: none;
-    background-color: lightcoral;
+    background-color: var(--seleted-bg-color);
     border-radius: 8px;
     
-    color: white;
+    color: grey;
     font-size: 18px;
     font-weight: bold;
+    box-shadow: var(--selected-btn-shadow);
 
     margin-top: auto;
     align-self: center;
     cursor: pointer;
+}
+
+.main_btn:active {
+    box-shadow: var(--selected-activebtn-shadow);
 }
 
 .social_accounts {

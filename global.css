@@ -8,8 +8,8 @@
     --selected-font-color: var(--light-font-color);
     --selected-area-color: var(--light-area-color);
     /* Set the 'light' theme */
-    --light-bg-color: #FFF;
-    --light-nav-color: whitesmmoke;
+    --light-bg-color: #ececec;
+    --light-nav-color: #ececec;
     --light-font-color: #333;
     --light-area-color: #EEE;
     /* Set the 'dark' theme */
@@ -27,12 +27,20 @@
     --selected-in-color: var(--light-in-color);
     --dark-in-color: #EEE;
     --light-in-color: #006087;
+
+    /* for neomorphism button*/
+    --selected-btn-shadow: var(--light-btn-shadow);
+    --light-btn-shadow: 12px 12px 24px #b7b7b7, -12px -12px 24px #ffffff;
+    --dark-btn-shadow: 12px 12px 24px #1b1b1b, -12px -12px 24px #2b2b2b;
+    --selected-activebtn-shadow: var(--light-activebtn-shadow);
+    --light-activebtn-shadow: inset 12px 12px 24px #b7b7b7, inset -12px -12px 24px #ffffff;
+    --dark-activebtn-shadow: inset 12px 12px 24px #1b1b1b, inset -12px -12px 24px #2b2b2b;
 }
 
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    transition-property: background-color, color, fill;
+    transition-property: background-color, color, fill, box-shadow;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
 }
