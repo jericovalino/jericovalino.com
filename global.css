@@ -40,7 +40,7 @@
 * {
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-    transition-property: background-color, color, fill, box-shadow;
+    transition-property: background-color, color, fill, box-shadow, border;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
 }

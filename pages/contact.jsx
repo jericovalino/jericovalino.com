@@ -104,7 +104,7 @@ const Contact = () => {
       <Layout watermark={"contact"}>
         <div className={contact}>
           <div className={content}>
-            <h1>Send me a message</h1>
+            <h1>Send me a Message</h1>
             <form className={form}>
               <label className={name_label}>Your Name</label>
               <input id="name" className={name} placeholder="name" value={formVal.name} onChange={nameChangeHandler} />

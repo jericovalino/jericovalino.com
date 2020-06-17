@@ -93,15 +93,20 @@
     width: 200px;
     min-height: 40px;
     border: none;
-    background-color: lightcoral;
+    background-color: var(--seleted-bg-color);
     border-radius: 8px;
     
-    color: white;
+    color: grey;
     font-size: 18px;
     font-weight: bold;
+    box-shadow: var(--selected-btn-shadow);
 
-    margin-top: auto;
+    margin-top: 1em;
     cursor: pointer;
+}
+
+.send_button:active {
+    box-shadow: var(--selected-activebtn-shadow);
 }
 
 
@@ -119,5 +124,9 @@
 
     .content {
         height: 80%;
+    }
+
+    .send_button {
+        margin-top: auto;
     }
 }

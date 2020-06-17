@@ -42,12 +42,12 @@
     min-width: 55px;
     height: 55px;
     border-radius: 50%;
-    border: 2px solid var(--selected-font-color);
+    border: 2px solid var(--selected-bg-color);
     margin-right: 10px;
+    box-shadow: var(--selected-btn-shadow);
 
     display: flex;
     overflow: hidden;
-    transition: border 300ms ease-in-out;
 }
 
 .dp img {
