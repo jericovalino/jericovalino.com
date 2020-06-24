@@ -8,6 +8,7 @@ import WaterMark from '../components/watermark';
 
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
+import Avatar from '../public/vectors/avatar';
 
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
@@ -35,7 +36,7 @@ const IndexPage = (props) => {
 
               <div className={name_tag}>
                 <div className={dp}>
-                  <img src={'/images/me.jpeg'} />
+                  <Avatar />
                 </div>
                 <section>
                   <h1>Jerico C. Valino</h1>

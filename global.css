@@ -43,10 +43,15 @@
     transition-property: background-color, color, fill, box-shadow, border;
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
+    -webkit-tap-highlight-color: transparent;
 }
 
 body {
     margin: 0;
     padding: 0;
     background-color: var(--selected-bg-color);
+}
+
+button:focus {
+    outline: none;
 }
