@@ -8,7 +8,6 @@ import WaterMark from '../components/watermark';
 
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
-import Avatar from '../public/vectors/avatar';
 
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
@@ -36,7 +35,7 @@ const IndexPage = (props) => {
 
               <div className={name_tag}>
                 <div className={dp}>
-                  <Avatar />
+                  <img src={'/images/me.jpeg'} />
                 </div>
                 <section>
                   <h1>Jerico C. Valino</h1>
@@ -66,15 +65,3 @@ export const getStaticProps = async () => {
 }
 
 export default IndexPage;
-
-  // import { useSelector, useDispatch, connect } from 'react-redux'
-
-  // const {count} = useSelector(state => state)
-  // const dispatch = useDispatch();
-
-  // const disFunc = () => {
-  //  dispatch({
-  //    type: "ADD-BLOG",
-  //    name: "ninja"
-  //  }) 
-  // }

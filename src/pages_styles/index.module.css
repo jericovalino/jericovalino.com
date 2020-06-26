@@ -47,6 +47,8 @@
     box-shadow: var(--selected-btn-shadow);
 
     display: flex;
+    justify-content: center;
+    align-items: center;
     overflow: hidden;
 }
 
@@ -91,16 +93,21 @@
 }
 
 .social_accounts {
-    position: fixed;
-    top: 5px;
-    right: 5px;
-    width: 80px;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
+    display: none;
 }
 
 @media (min-width: 550px) {
+    .social_accounts {
+        display: initial;
+        position: fixed;
+        top: 5px;
+        right: 5px;
+        width: 80px;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+    }
+
     .main_btn {
         align-self: unset;
     }

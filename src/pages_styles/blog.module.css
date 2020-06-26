@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     color: var(--selected-font-color);
+    font-size: small;
     overflow-x: hidden;
 }
 
@@ -21,13 +22,20 @@
 }
 
 .post p {
-    display: block;
+    width: 100%;
     text-align: justify;
+}
+
+.post ul {
+    padding: 15px;
+}
+
+.post blockquote {
+    margin: 0;
 }
 
 .post pre {
     width: 100%;
-    display: block;
     overflow: auto;
 }
 
@@ -41,4 +49,10 @@
     margin-top: 2em;
     display: flex;
     flex-wrap: wrap;
+}
+
+@media (min-width: 550px) {
+    .post {
+        font-size: medium;
+    }
 }
