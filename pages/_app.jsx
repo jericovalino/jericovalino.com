@@ -1,33 +1,21 @@
 // import App from 'next/app'
 import '../global.css';
+import Layout from '../components/layout';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 
-const initState = {
-  showAlert: false,
-  title: "",
-  body: ""
-}
+import rootReducer from '../reducers/rootReducer';
 
-const alertReducer = (state = initState, action) => {
-  switch (action.type) {
-    case "SHOW-ALERT":
-      return { ...state, showAlert: true, title: action.title, body: action.body }
-    case "HIDE-ALERT":
-      return { ...state, showAlert: false, title: "", body: "" }
-    default:
-      return state
-  }
-}
-
-let store = createStore(alertReducer);
+let store = createStore(rootReducer);
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Provider store={store}>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </Provider>
     </>
   )

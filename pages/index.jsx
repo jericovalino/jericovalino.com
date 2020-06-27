@@ -1,17 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from '../src/pages_styles/index.module.css';
+
 import Head from 'next/head';
 import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 
-import Layout from '../components/layout';
 import WaterMark from '../components/watermark';
-
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
 const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
 const IndexPage = (props) => {
+
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: "CHANGE_LABEL", label: "about" })
+  }, [])
 
   return (
     <>
@@ -22,38 +27,36 @@ const IndexPage = (props) => {
         <meta property="og:description" content="I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user." />
       </Head>
 
-      <Layout watermark="about">
-        <div className={index}>
-          <div className={content}>
-            <div className={social_accounts}>
-              <LinkedinIcon />
-              <GithubIcon />
-            </div>
-            <section>
-              <h1>Awesome every Pixel.</h1>
-              <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
+      <div className={index}>
+        <div className={content}>
+          <div className={social_accounts}>
+            <LinkedinIcon />
+            <GithubIcon />
+          </div>
+          <section>
+            <h1>Awesome every Pixel.</h1>
+            <p>I’m a web developer from Batangas Philippines. I love building reactive and responsive website using the latest technologies available to deliver awesome experience to the user.</p>
 
-              <div className={name_tag}>
-                <div className={dp}>
-                  <img src={'/images/me.jpeg'} />
-                </div>
-                <section>
-                  <h1>Jerico C. Valino</h1>
-                  <p>React.js Web Developer</p>
-                </section>
+            <div className={name_tag}>
+              <div className={dp}>
+                <img src={'/images/me.jpeg'} />
               </div>
-
-              <Link href={'/portfolio'}>
-                <button className={main_btn}>view portfolio</button>
-              </Link>
-            </section>
-
-            <div className={watermark}>
-              <WaterMark />
+              <section>
+                <h1>Jerico C. Valino</h1>
+                <p>React.js Web Developer</p>
+              </section>
             </div>
+
+            <Link href={'/portfolio'}>
+              <button className={main_btn}>view portfolio</button>
+            </Link>
+          </section>
+
+          <div className={watermark}>
+            <WaterMark />
           </div>
         </div>
-      </Layout>
+      </div>
     </>
   )
 }

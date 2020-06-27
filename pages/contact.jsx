@@ -1,12 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import style from '../src/pages_styles/contact.module.css';
 
 import Head from 'next/head';
-import Layout from '../components/layout';
+import { useDispatch } from 'react-redux';
 
 import Alert from '../components/alert';
 import regex from '../src/utils/regex';
-import { useDispatch } from 'react-redux';
 
 const { contact, content,
   form, name_label,
@@ -16,7 +15,10 @@ const { contact, content,
 
 const Contact = () => {
 
-  const dispatchAlert = useDispatch();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch({ type: "CHANGE_LABEL", label: "contact" })
+  }, [])
 
   const [formVal, setFormVal] = useState({
     name: "",
@@ -38,7 +40,7 @@ const Contact = () => {
         .then(() => {
           setFormVal({ name: "", email: "", message: "" });
           setValid({ name: false, email: false, message: false });
-          dispatchAlert({
+          dispatch({
             type: "SHOW-ALERT",
             title: "Message Sent!",
             body: "Thank you for messaging me. I'll get back to you soon."
@@ -47,14 +49,14 @@ const Contact = () => {
         .catch(() => {
           setFormVal({ name: "", email: "", message: "" });
           setValid({ name: false, email: false, message: false });
-          dispatchAlert({
+          dispatch({
             type: "SHOW-ALERT",
             title: "Message Sent!",
             body: "Thank you for messaging me. I'll get back to you soon."
           })
         })
     } else {
-      dispatchAlert({
+      dispatch({
         type: "SHOW-ALERT",
         title: "Oooppss..",
         body: "Please fill out the form correctly."
@@ -101,22 +103,20 @@ const Contact = () => {
       </Head>
 
       <Alert />
-      <Layout watermark={"contact"}>
-        <div className={contact}>
-          <div className={content}>
-            <h1>Send me a Message</h1>
-            <form className={form}>
-              <label className={name_label}>Your Name</label>
-              <input id="name" className={name} placeholder="name" value={formVal.name} onChange={nameChangeHandler} />
-              <label className={email_label}>E-mail</label>
-              <input id="email" className={email} placeholder="@" value={formVal.email} onChange={emailChangeHandler} />
-              <label className={message_label}>Message</label>
-              <textarea id="message" className={message} placeholder="..." value={formVal.message} onChange={messageChangeHandler} />
-            </form>
-            <button className={send_button} onClick={sendMessageHandler}>Send</button>
-          </div>
+      <div className={contact}>
+        <div className={content}>
+          <h1>Send me a Message</h1>
+          <form className={form}>
+            <label className={name_label}>Your Name</label>
+            <input id="name" className={name} placeholder="name" value={formVal.name} onChange={nameChangeHandler} />
+            <label className={email_label}>E-mail</label>
+            <input id="email" className={email} placeholder="@" value={formVal.email} onChange={emailChangeHandler} />
+            <label className={message_label}>Message</label>
+            <textarea id="message" className={message} placeholder="..." value={formVal.message} onChange={messageChangeHandler} />
+          </form>
+          <button className={send_button} onClick={sendMessageHandler}>Send</button>
         </div>
-      </Layout>
+      </div>
     </>
   )
 }

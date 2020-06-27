@@ -18,10 +18,21 @@ const Navigation = () => {
 
             <Stacks />
 
-            <NavigationItem link={'/'} name={'Home'}><UserIcon width="100%" height="100%" /></NavigationItem>
-            <NavigationItem link={'/portfolio'} name={'Project'}><ProjectsIcon width="100%" height="100%" /></NavigationItem>
-            <NavigationItem link={'/blogs'} name={'Blog'}><BlogIcon width="90%" height="90%" /></NavigationItem>
-            <NavigationItem link={'/contact'} name={'Contact'}><HomeIcon width="90%" height="90%" /></NavigationItem>
+            <NavigationItem link={'/'} name={'Home'}>
+                <UserIcon width="100%" height="100%" />
+            </NavigationItem>
+
+            <NavigationItem link={'/portfolio'} name={'Project'}>
+                <ProjectsIcon width="100%" height="100%" />
+            </NavigationItem>
+
+            <NavigationItem link={'/blogs'} name={'Blog'}>
+                <BlogIcon width="90%" height="90%" />
+            </NavigationItem>
+            
+            <NavigationItem link={'/contact'} name={'Contact'}>
+                <HomeIcon width="90%" height="90%" />
+            </NavigationItem>
 
             <div className={theme_switch}>
                 <ThemeSwitch />

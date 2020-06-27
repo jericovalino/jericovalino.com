@@ -20,4 +20,4 @@ const ThemeSwitch = () => {
     )
 }
 
-export default React.memo(ThemeSwitch);
+export default ThemeSwitch;

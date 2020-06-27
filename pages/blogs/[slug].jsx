@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import style from '../../src/pages_styles/blog.module.css';
+
 import Head from 'next/head';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
-
-import Layout from '../../components/layout';
+import { useDispatch } from 'react-redux';
 
 const Post = ({ content, data }) => {
+
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch({ type: "CHANGE_LABEL", label: "" })
+    }, [])
 
     return (
         <>
@@ -17,11 +22,9 @@ const Post = ({ content, data }) => {
                 <meta property="og:title" content={data.title} />
             </Head>
 
-            <Layout>
-                <div className={style.post}>
-                    <main className={style.content} dangerouslySetInnerHTML={{ __html: content }} />
-                </div>
-            </Layout>
+            <div className={style.post}>
+                <main className={style.content} dangerouslySetInnerHTML={{ __html: content }} />
+            </div>
         </>
     )
 }
