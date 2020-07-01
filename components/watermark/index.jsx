@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import style from './style.module.css';
+import {
+    watermark, layer,
+    top, bottom, content__wrap,
+    content__body, handle
+} from './style.module.css';
+
 import { motion } from 'framer-motion';
 
 let wmposition;
 let windowWidth;
 
-const { watermark, layer, top, bottom, content__wrap, content__body, handle } = style;
-
 const WaterMark = () => {
+
     const [slide, setSlide] = useState(0)
 
     useEffect(() => {

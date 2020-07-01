@@ -1,17 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import style from '../src/pages_styles/contact.module.css';
+import {
+  contact, content,
+  form, name_label,
+  name, email_label,
+  email, message_label,
+  message, send_button
+} from '../src/pages_styles/contact.module.css';
 
 import Head from 'next/head';
 import { useDispatch } from 'react-redux';
 
 import Alert from '../components/alert';
 import regex from '../src/utils/regex';
-
-const { contact, content,
-  form, name_label,
-  name, email_label,
-  email, message_label,
-  message, send_button } = style;
 
 const Contact = () => {
 

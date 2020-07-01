@@ -22,3 +22,15 @@
     transition-duration: 150ms;
     transition-timing-function: ease-in-out;
 }
+
+.light {
+    left: 5%; 
+    background-color: #f5ed28; 
+    border-color: #e3c83a; 
+}
+
+.dark {
+    left: 40%; 
+    background-color: #fffdf1; 
+    border-color: #e1e5c3; 
+}

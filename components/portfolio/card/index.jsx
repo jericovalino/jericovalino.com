@@ -1,11 +1,9 @@
 import React from 'react';
-import style from './style.module.css'
+import { card, overlay } from './style.module.css'
 
 import { motion } from 'framer-motion';
 
 import OpenIcon from '../../../public/vectors/openIcon';
-
-const { card, overlay } = style;
 
 const Card = (props) => {
 

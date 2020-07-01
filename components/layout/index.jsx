@@ -1,13 +1,13 @@
 import React from 'react';
-import style from './style.module.css';
-import Navigation from '../navigation';
+import { layout, watermark, content } from './style.module.css';
 
 import { useSelector } from 'react-redux';
-
-const { layout, watermark, content } = style;
+import Navigation from '../navigation';
 
 const Layout = (props) => {
+    
     const { watermark: label } = useSelector(state => state.layout)
+    
     return (
         <div className={layout}>
             <Navigation />

@@ -1,20 +1,17 @@
 import React from 'react';
-import style from "./style.module.css";
-import { useTheme } from "../../src/hooks/theme";
+import { theme_switch, lever, light, dark } from "./style.module.css";
 
-const { theme_switch, lever } = style;
+import { useTheme } from "../../src/hooks/theme";
 
 const ThemeSwitch = () => {
 
     const [darkMode, switchTheme] = useTheme();
 
-    const leverProp = [{ 'left': '5%', 'backgroundColor': '#f5ed28', 'borderColor': '#e3c83a' },
-    { 'left': '40%', 'backgroundColor': '#fffdf1', 'borderColor': '#e1e5c3' }];
-
-
     return (
         <div className={theme_switch} onClick={switchTheme}>
-            <div className={lever} style={!darkMode ? leverProp[0] : leverProp[1]}>
+            <div className={!darkMode
+                ? [lever, light].join(' ')
+                : [lever, dark].join(' ')}>
             </div>
         </div>
     )

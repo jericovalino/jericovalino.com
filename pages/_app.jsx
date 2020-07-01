@@ -2,12 +2,8 @@
 import '../global.css';
 import Layout from '../components/layout';
 
-import { createStore } from 'redux';
+import store from '../src/store';
 import { Provider } from 'react-redux';
-
-import rootReducer from '../reducers/rootReducer';
-
-let store = createStore(rootReducer);
 
 function MyApp({ Component, pageProps }) {
   return (

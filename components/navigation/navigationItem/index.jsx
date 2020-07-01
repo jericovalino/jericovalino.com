@@ -1,16 +1,18 @@
 import React from 'react';
-import style from './style.module.css';
+import { navigation__item, active, navigation__icon } from './style.module.css';
 
 import Link from 'next/link';
-import { useDispatch } from 'react-redux';
-
-const { navigation__item, navigation__icon } = style;
+import { useRouter } from 'next/router';
 
 const NavigationItem = (props) => {
 
+    const { pathname } = useRouter();
+
     return (
         <Link href={props.link}>
-            <div className={navigation__item} >
+            <div className={pathname == props.link
+                ? [navigation__item, active].join(' ')
+                : navigation__item} >
                 <div className={navigation__icon}>
                     {props.children}
                 </div>

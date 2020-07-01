@@ -1,12 +1,11 @@
 import React, { useEffect } from 'react';
-import style from '../../src/pages_styles/blogs.module.css';
-import BlogCard from '../../components/blogs/card';
+import { blogs } from '../../src/pages_styles/blogs.module.css';
 
-import Head from 'next/head';
 import fs from 'fs';
+import Head from 'next/head';
 import { useDispatch } from 'react-redux';
 
-const { blogs } = style;
+import BlogCard from '../../components/blogs/card';
 
 const Blogs = ({ filenames }) => {
 

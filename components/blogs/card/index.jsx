@@ -7,9 +7,7 @@ const BlogCard = (props) => {
     return (
         <Link href={props.link}>
             <li className={blog_card}>
-                <h3>
-                    {props.children}
-                </h3>
+                <h3> {props.children} </h3>
             </li>
         </Link>
     )

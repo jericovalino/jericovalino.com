@@ -1,5 +1,9 @@
 import React, { useEffect } from 'react';
-import style from '../src/pages_styles/index.module.css';
+import {
+  index, social_accounts,
+  content, name_tag,
+  dp, main_btn, watermark
+} from '../src/pages_styles/index.module.css';
 
 import Head from 'next/head';
 import Link from 'next/link';
@@ -8,8 +12,6 @@ import { useDispatch } from 'react-redux';
 import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
-
-const { index, social_accounts, content, name_tag, dp, main_btn, watermark } = style;
 
 const IndexPage = (props) => {
 

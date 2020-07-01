@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './style.module.css';
+import { navigation__bar, theme_switch } from './style.module.css';
 
 import Stacks from './stacks';
 import NavigationItem from './navigationItem';
@@ -9,10 +9,7 @@ import ProjectsIcon from '../../public/vectors/projectsIcon';
 import HomeIcon from '../../public/vectors/homeIcon';
 import BlogIcon from '../../public/vectors/blogIcon';
 
-const { navigation__bar, theme_switch } = style;
-
 const Navigation = () => {
-
     return (
         <nav className={navigation__bar}>
 
@@ -29,7 +26,7 @@ const Navigation = () => {
             <NavigationItem link={'/blogs'} name={'Blog'}>
                 <BlogIcon width="90%" height="90%" />
             </NavigationItem>
-            
+
             <NavigationItem link={'/contact'} name={'Contact'}>
                 <HomeIcon width="90%" height="90%" />
             </NavigationItem>

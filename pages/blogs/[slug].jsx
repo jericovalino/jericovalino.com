@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import style from '../../src/pages_styles/blog.module.css';
+import {post, contents} from '../../src/pages_styles/blog.module.css';
 
 import Head from 'next/head';
 import fs from 'fs';
@@ -22,8 +22,8 @@ const Post = ({ content, data }) => {
                 <meta property="og:title" content={data.title} />
             </Head>
 
-            <div className={style.post}>
-                <main className={style.content} dangerouslySetInnerHTML={{ __html: content }} />
+            <div className={post}>
+                <main className={contents} dangerouslySetInnerHTML={{ __html: content }} />
             </div>
         </>
     )
