@@ -54,20 +54,26 @@
     background-color: #232323;
 }
 
+.redux {
+    /* z-index: 0; */
+    left: 0px;
+    background-color: #343434;
+}
+
 .nodejs {
-    z-index: 0;
+    /* z-index: 0; */
     left: 0px;
     background-color: #343434;
 }
 
 .psql {
-    z-index: -1;
+    /* z-index: -1; */
     left: 0px;
     background-color: #635F5F;
 }
 
 .graphql {
-    z-index: -1;
+    /* z-index: -1; */
     left: 0px;
     background-color: #D2D2D2;
 }
