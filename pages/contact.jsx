@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import {
   contact, content,
   form, name_label,
@@ -16,9 +16,6 @@ import regex from '../src/utils/regex';
 const Contact = () => {
 
   const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "CHANGE_LABEL", label: "contact" })
-  }, [])
 
   const [formVal, setFormVal] = useState({
     name: "",

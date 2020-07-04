@@ -1,18 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { portfolio, content } from '../src/pages_styles/portfolio.module.css';
 
 import Head from 'next/head';
 import { motion } from 'framer-motion';
-import { useDispatch } from 'react-redux';
 
 import Card from '../components/portfolio/card';
 
 const Portfolio = () => {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "CHANGE_LABEL", label: "portfolio" })
-  }, [])
 
   const container = {
     hidden: { opacity: 1, scale: 0 },

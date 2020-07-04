@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   index, social_accounts,
   content, name_tag,
@@ -7,19 +7,12 @@ import {
 
 import Head from 'next/head';
 import Link from 'next/link';
-import { useDispatch } from 'react-redux';
 
 import WaterMark from '../components/watermark';
 import GithubIcon from '../public/vectors/githubIcon';
 import LinkedinIcon from '../public/vectors/linkedinIcon';
 
 const IndexPage = (props) => {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "CHANGE_LABEL", label: "about" })
-  }, [])
-
   return (
     <>
       <Head>

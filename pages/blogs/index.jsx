@@ -1,19 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { blogs } from '../../src/pages_styles/blogs.module.css';
 
 import fs from 'fs';
 import Head from 'next/head';
-import { useDispatch } from 'react-redux';
 
 import BlogCard from '../../components/blogs/card';
 
 const Blogs = ({ filenames }) => {
-
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch({ type: "CHANGE_LABEL", label: "blogs" })
-  }, [])
-
   return (
     <>
       <Head>

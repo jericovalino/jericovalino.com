@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {post, contents} from '../../src/pages_styles/blog.module.css';
 
 import Head from 'next/head';
@@ -6,15 +6,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import marked from 'marked';
-import { useDispatch } from 'react-redux';
 
 const Post = ({ content, data }) => {
-
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch({ type: "CHANGE_LABEL", label: "" })
-    }, [])
-
     return (
         <>
             <Head>
