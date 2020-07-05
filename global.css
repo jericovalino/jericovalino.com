@@ -10,12 +10,12 @@
     /* Set the 'light' theme */
     --light-bg-color: #ececec;
     --light-nav-color: #ececec;
-    --light-font-color: #333;
+    --light-font-color: #3e3e3e;
     --light-area-color: #EEE;
     /* Set the 'dark' theme */
     --dark-bg-color: #232323;
     --dark-nav-color: #343434;
-    --dark-font-color: #EEE;
+    --dark-font-color: #e2e2e2;
     --dark-area-color: #2B2B2B;
 
 

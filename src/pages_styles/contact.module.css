@@ -19,7 +19,7 @@
 .content h1 {
     margin-top: 0;
     color: var(--selected-font-color); 
-    font-size: x-large; 
+    font-size: 26px; 
 }
 
 .form {
