@@ -10,53 +10,42 @@ import {
 import Head from 'next/head';
 import { useDispatch } from 'react-redux';
 import { alertMessage } from '../src/actions';
-import { useInputFeedback, useFormReset } from '../src/hooks/form';
+import { useInputFeedback, useFormReset, useSendMessage } from '../src/hooks/form';
 import { nameValidator, emailValidator, messageValidator } from '../src/utils/formValidator';
 import Alert from '../components/alert';
 
 const Contact = () => {
 
   const dispatch = useDispatch();
+  const sendMessage = useSendMessage();
 
   const [formVal, setFormVal] = useState({
-    name: "",
-    email: "",
-    message: ""
+    name: "", email: "", message: ""
   })
 
   const [valid, setValid] = useState({
-    name: false,
-    email: false,
-    message: false
+    name: false, email: false, message: false
   })
 
-  const sendMessageHandler = () => {
+  const sendMessageHandler = async () => {
     const { name, email, message } = valid;
     if (name && email && message) {
-      fetch("https://uyi4098e01.execute-api.ap-south-1.amazonaws.com/beta",
-        { method: 'POST', body: JSON.stringify(formVal) })
-        .then(() => {
-          useFormReset(formVal, setFormVal);
-          useFormReset(valid, setValid);
-          dispatch(alertMessage("success"));
-        })
-        .catch(() => {
-          useFormReset(formVal, setFormVal);
-          useFormReset(valid, setValid)
-          dispatch(alertMessage("success"));
-        })
+      if (await sendMessage(formVal)) {
+        useFormReset(formVal, setFormVal);
+        useFormReset(valid, setValid)
+        dispatch(alertMessage("success"));
+      }
     } else {
       dispatch(alertMessage());
     }
   }
 
   const inputOnChangeHandler = (e, validation) => {
+    const isValid = validation(e)
     const targetValue = new Object();
     targetValue[e.target.id] = e.target.value;
     setFormVal({ ...formVal, ...targetValue });
-    const isValid = validation(e)
     useInputFeedback(isValid, e, (value) => {
-      console.log(value);
       setValid({ ...valid, ...value });
     })
   }
@@ -78,21 +67,24 @@ const Contact = () => {
               className={name}
               placeholder="name"
               value={formVal.name}
-              onChange={(e) => inputOnChangeHandler(e, nameValidator)} />
+              onChange={(e) =>
+                inputOnChangeHandler(e, nameValidator)} />
             <label className={email_label}>E-mail</label>
             <input
               id="email"
               className={email}
               placeholder="@"
               value={formVal.email}
-              onChange={(e) => inputOnChangeHandler(e, emailValidator)} />
+              onChange={(e) =>
+                inputOnChangeHandler(e, emailValidator)} />
             <label className={message_label}>Message</label>
             <textarea
               id="message"
               className={message}
               placeholder="..."
               value={formVal.message}
-              onChange={(e) => inputOnChangeHandler(e, messageValidator)} />
+              onChange={(e) =>
+                inputOnChangeHandler(e, messageValidator)} />
           </form>
           <button
             className={send_button}
