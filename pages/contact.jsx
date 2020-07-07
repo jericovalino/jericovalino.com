@@ -16,23 +16,25 @@ import Alert from '../components/alert';
 
 const Contact = () => {
 
-  const dispatch = useDispatch();
-  const sendMessage = useSendMessage();
-
-  const [formVal, setFormVal] = useState({
+  const [formValue, setFormValue] = useState({
     name: "", email: "", message: ""
   })
 
-  const [valid, setValid] = useState({
+  const [formIsValid, setFormIsValid] = useState({
     name: false, email: false, message: false
   })
 
+  const dispatch = useDispatch();
+  const sendMessage = useSendMessage();
+  const formValReset = useFormReset(formValue, setFormValue);
+  const isValidReset = useFormReset(formIsValid, setFormIsValid);
+  
   const sendMessageHandler = async () => {
-    const { name, email, message } = valid;
+    const { name, email, message } = formIsValid;
     if (name && email && message) {
-      if (await sendMessage(formVal)) {
-        useFormReset(formVal, setFormVal);
-        useFormReset(valid, setValid)
+      if (await sendMessage(formValue)) {
+        formValReset();
+        isValidReset();
         dispatch(alertMessage("success"));
       }
     } else {
@@ -44,9 +46,9 @@ const Contact = () => {
     const isValid = validation(e)
     const targetValue = new Object();
     targetValue[e.target.id] = e.target.value;
-    setFormVal({ ...formVal, ...targetValue });
+    setFormValue({ ...formValue, ...targetValue });
     useInputFeedback(isValid, e, (value) => {
-      setValid({ ...valid, ...value });
+      setFormIsValid({ ...formIsValid, ...value });
     })
   }
 
@@ -66,7 +68,7 @@ const Contact = () => {
               id="name"
               className={name}
               placeholder="name"
-              value={formVal.name}
+              value={formValue.name}
               onChange={(e) =>
                 inputOnChangeHandler(e, nameValidator)} />
             <label className={email_label}>E-mail</label>
@@ -74,7 +76,7 @@ const Contact = () => {
               id="email"
               className={email}
               placeholder="@"
-              value={formVal.email}
+              value={formValue.email}
               onChange={(e) =>
                 inputOnChangeHandler(e, emailValidator)} />
             <label className={message_label}>Message</label>
@@ -82,7 +84,7 @@ const Contact = () => {
               id="message"
               className={message}
               placeholder="..."
-              value={formVal.message}
+              value={formValue.message}
               onChange={(e) =>
                 inputOnChangeHandler(e, messageValidator)} />
           </form>
